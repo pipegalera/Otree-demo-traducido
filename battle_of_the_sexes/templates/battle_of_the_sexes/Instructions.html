@@ -1,0 +1,121 @@
+
+<style type="text/css">
+    ul {
+        list-style-type:circle;
+        padding-left:20px;
+    }
+    h3.panel-sub-heading {
+        padding-bottom:10px;
+        padding-left:4px;
+    }
+
+    td, th{
+        text-align: center;
+    }
+
+    .rotate90 {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 60%;
+    }
+
+    .instructions {
+        position: relative;
+        text-shadow: 0 1px 0 #fff;
+        line-height: 1.5;
+        margin: 60px auto;
+        background-color: #f5f5dc;
+        background-image: linear-gradient(to bottom, #f5f5dc 0px, #fbfbeb 100%);
+        padding-top: 5px;
+        padding-bottom: 15px;
+        margin-top: 20px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .instructions:before, .instructions:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width:300px;
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+        transform: rotate(-3deg);
+    }
+
+    .instructions:after {
+        transform: rotate(3deg);
+        right: 10px;
+        left: auto;
+    }
+</style>
+
+<div class="instructions well well-lg" style="">
+
+    <h3 class="panel-sub-heading">
+        Instrucciones
+    </h3>
+
+    <p>
+        En este estudio, vas a ser emparejado al azar con otro participante de formna anónima. Uno de vosotros
+        va a ser designado al azar como "Marido" y al otro participante va a ser designado como "Esposa". Antes
+        de tomar ninguna decisión, se explicará vuesto papel.
+    </p>
+
+    <p>
+        Ambos cónyuges (Marido y Esposa) tienen dos opciones para hacer por la noche. Cualquiera de los dos puede
+        ir a ver un partido de fútbol o puede ir a la ópera. Supongamos que el marido prefiere ir al fútbol y
+        la mujer a la ópera, pero para ambos es más importante salir juntos esa noche que hacer cada uno su plan
+        preferido.
+    </p>
+
+    <p>
+        Cada uno debe tomar una decisión independiente y simultánea. Tus beneficios serán fijados por ambas
+        decisiones como se muestra a continuación:
+    </p>
+
+    <p>
+        <em>En cada celda, la cantidad (en puntos) a la izquierda es la recompensa para la esposa y hacia la derecha para el marido.</em>
+
+    </p>
+
+    <div class="row">
+        <div class="col-md-7 col-md-offset-2">
+            <table class="table table-hover">
+                <tr>
+                    <th colspan="2"></th>
+                    <th colspan="2">Marido</th>
+                </tr>
+                <tr>
+                    <th colspan="2"></th>
+                    <th>Fútbol</th>
+                    <th>Ópera</th>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="rotate90">Esposa</span> </th>
+                    <th>Fútbol</th>
+                    <td>200, 300</td>
+                    <td>0, 0</td>
+                </tr>
+                <tr>
+                    <th>Ópera</th>
+                    <td>0, 0</td>
+                    <td>300, 200</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <p>
+         Para tu comodidad, estas instrucciones estarán disponibles en todas las pantallas siguientes del estudio.
+    </p>
+
+</div>

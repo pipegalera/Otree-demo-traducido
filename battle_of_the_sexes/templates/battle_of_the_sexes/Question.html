@@ -1,0 +1,27 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Pregunta de entendimiento {{ num_q }} de {{ total_q }}
+{% endblock %}
+
+{% block content %}
+
+    {% if num_q == 1 %}
+        <p>
+        Supongamos que Marido eligió ir a un partido de fútbol y Esposa eligió
+        ir a la ópera, ¿Cuáles serían sus pagos, respectivamente ?
+        </p>
+        <p>
+            {% formfield player.training_question_1_husband with label='Los pagos para Marido serían:' %}
+        </p>
+        <p>
+            {% formfield player.training_question_1_wife with label='Los pagos para Esposa serían:' %}
+        </p>
+    {% endif %}
+
+    {% next_button %}
+
+    {% include 'battle_of_the_sexes/Instructions.html' %}
+
+{% endblock %}

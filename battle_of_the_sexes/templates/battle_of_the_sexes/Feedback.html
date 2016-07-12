@@ -1,0 +1,34 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Solución a la Pregunta de entendimiento {{ num_q }} de {{ total_q }}
+{% endblock %}
+
+{% block content %}
+
+
+    {% if player.is_training_question_1_husband_correct %}
+        <p class="text-success">Tu respuesta {{player.training_question_1_husband}} para Marido era correcta.</p>
+    {% else %}
+        <p class="text-danger">Tu respuesta {{player.training_question_1_husband}} para Marido fue incorrecta.</p>
+    {% endif %}
+    {% if player.is_training_question_1_wife_correct %}
+        <p class="text-success">Tu respuesta {{player.training_question_1_wife}} para Esposa fue correcta.</p>
+    {% else %}
+        <p class="text-danger">Tu respuesta {{player.training_question_1_wife}} para Esposa fue incorrecta.</p>
+    {% endif %}
+
+    <p>
+        Supongamos que Marido eligió ir a un partido de fútbol y Esposa eligió
+        ir a la ópera, ¿Cuáles serían sus pagos, respectivamente ?
+    </p>
+    <p>
+        <strong>Solución:</strong> Los pagos para Marido y Esposa serían <strong>0 puntos.</strong>
+    </p>
+
+    {% next_button %}
+
+    {% include 'battle_of_the_sexes/Instructions.html' %}
+
+{% endblock %}

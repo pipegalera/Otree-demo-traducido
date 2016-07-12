@@ -1,0 +1,28 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Entendiendo la pregunta {{ num_q }} de {{ total_q }}
+{% endblock %}
+
+{% block content %}
+
+    {% if num_q == 1 %}
+        <p>
+            Suponga que elige "10" y los otros participantes en tu grupo eligen: 20,
+            20, 10, 30. La media de todos esos números es 18, ¿Cuál es el número
+            que eligió el ganador y cuál sería su ganancia?
+        </p>
+        <p>
+            {% formfield player.training_question_1_win_pick with label='El ganador escogió:' %}
+        </p>
+        <p>
+            {% formfield player.training_question_1_my_payoff with label='Mi ganancia sería de:' %}
+        </p>
+    {% endif %}
+
+    {% next_button %}
+
+    {% include 'beauty/Instructions.html' %}
+
+{% endblock %}

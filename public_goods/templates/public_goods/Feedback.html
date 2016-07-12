@@ -1,0 +1,37 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Solución a la Pregunta de Entendimiento
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+        Su respuesta: <span  class="text-info">{{ player.question }}</span>, es {% if player.question_correct %}<span class="text-success">correcta</span>
+        {% else %}<span class="text-danger">incorrecta.</span>{% endif %}
+    </p>
+    <p>
+        Suponga que en un grupo, 1 participante contribuye 80 puntos, 1 participante contribuye 40 y el participante
+        restante no contribuye al proyecto.
+    </p>
+    <p>
+        ¿Cuál serían los beneficios de un participante que a contribuído 80 puntos?
+    </p>
+    <p>
+        <strong>Solución:</strong> 92 points
+    </p>
+
+    <p>
+        <strong>Explicación:</strong> La contricución total ha sido de 80+40+0=120. El beneficio total del proyecto fue
+        de 120*{{ Constants.efficiency_factor }} = 216. Cada participante tiene una parte equitativa de las ganancias:
+        216/{{ Constants.players_per_group }} = 72. Los beneficios finales para los participantes serán los puntos
+        que le queden después de contribuír más la ganancia del proyecto. En este caso, los beneficios de la parsona
+        que ha contribuído 80 puntos es de (100-80)+72 = 92
+    </p>
+    {% next_button %}
+
+    {% include 'public_goods/Instructions.html' %}
+
+{% endblock %}

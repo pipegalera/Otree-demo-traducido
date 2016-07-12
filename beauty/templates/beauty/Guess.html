@@ -1,0 +1,16 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Tu predicción
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.guess_value with label="Por favor, elíge un número de 0 a 100:" %}
+    {% next_button %}
+
+
+    {% include "beauty/Instructions.html" %}
+
+{% endblock %}

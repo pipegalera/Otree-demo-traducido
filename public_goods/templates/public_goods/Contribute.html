@@ -1,0 +1,16 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Contribución
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.contribution with label="¿Con cuánta cantidad de puntos quieres contribuir al proyecto? Introduce un número entero de 0 a 100" %}
+
+    {% next_button %}
+
+    {% include 'public_goods/Instructions.html' %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Entendiendo la pregunta
+{% endblock %}
+
+{% block content %}
+    <p>
+        Suponga que en un grupo, 1 participante contribuye 80 puntos, 1 participante contribuye 40 y el participante
+        restante no contribuye al proyecto.
+    </p>
+    <p>
+        ¿Cuál serían los beneficios de un participante que a contribuído 80 puntos?
+    </p>
+
+    {% formfield player.question with label="Los beneficios serían" %}
+
+    {% next_button %}
+
+    {% include 'public_goods/Instructions.html' %}
+
+{% endblock %}

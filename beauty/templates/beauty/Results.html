@@ -1,0 +1,51 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Resultados
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<p>
+    Ha elegido <strong>{{player.guess_value}}</strong>. Otros participantes eligieron
+
+    {% if other_guesses_count > 1%}
+        {% for g in other_guesses %}
+            {% if not forloop.last %}
+                {{ g }},
+            {% else %}
+                y {{ g }}.
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% for g in other_guesses %}
+            {{ g }}.
+        {% endfor %}
+    {% endif %}
+
+    Dos tercios de la media son <strong>{{ two_third_average|floatformat:"-4" }}</strong>
+    y el número escogido más cernado ha sido <strong>{{group.best_guess}}</strong>.
+
+    {% if group.tie %}
+        Hay {{ winners_cnt }} participantes que han elegido este número y
+        {% if player.is_winner %} eres {% else %} no eres {% endif %} uno
+        de ellos. Como resultado, ha recibido <strong>{{ player.payoff }}</strong>.
+    {% else %}
+        Como resultado, {% if player.is_winner %} eres {% else %} no eres {% endif %}
+        el ganador y recibe <strong>{{ player.payoff}}</strong>.
+    {% endif %}
+
+    Además, recibibirá 10 puntos por su participación. Por lo tanto, la ganancia
+    total es de <strong>{{ total_payoff }}</strong>.
+
+</p>
+
+    {% next_button %}
+
+    {% include "beauty/Instructions.html" %}
+
+{% endblock %}

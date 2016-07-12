@@ -1,0 +1,24 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Distribución de Activos (Periodo {{ round_num }} de {{ num_of_rounds }})
+{% endblock %}
+
+{% block content %}
+
+
+
+    <p>
+        Los dividendos por acción del periodo {{ round_num }} son {{ group.dividend_per_share }}. Tienes {{ player.shares }}
+        acciones por lo que revives {{ dividend_gain }} en total por dividendos. Ahora tu posición es la siguiente:
+    </p>
+
+    <h5 class="text-info text-center">Dinero: {{ player.cash }};  Acciones: {{ player.shares }}</h5>
+
+    {% next_button %}
+
+    {% include 'asset_market/Rules.html' %}
+
+
+{% endblock %}

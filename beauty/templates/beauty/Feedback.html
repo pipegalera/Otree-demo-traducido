@@ -1,0 +1,59 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Solución a la Pregunta de Entendimiento {{ num_q }} de {{ total_q }}
+{% endblock %}
+
+{% block content %}
+
+
+
+    {% if player.is_training_question_1_win_pick_correct %}
+        <p class="text-success">
+            Tu respuesta <strong>'El ganador escogió: {{player.training_question_1_win_pick}}'</strong>
+            es correcta.
+        </p>
+    {% else %}
+        <p class="text-danger">
+            Tu respuesta <strong>'El ganador escogió: {{player.training_question_1_win_pick}}'</strong>
+            es incorrecta.
+        </p>
+    {% endif %}
+
+    {% if player.is_training_question_1_my_payoff_correct %}
+        <p class="text-success">
+            Tu respuesta <strong>'Mi ganancia sería de: {{player.training_question_1_my_payoff}}'</strong>
+            es correcta.
+        </p>
+    {% else %}
+        <p class="text-danger">
+           Tu respuesta <strong>'Mi ganancia sería de: {{player.training_question_1_my_payoff}}'</strong>
+            es incorrecta.
+        </p>
+    {% endif %}
+
+
+    <p>
+        Suponga que elige 10 y los otros participante en tu grupo elige 20, 20, 10, 30.
+        La media de todos esos números es 18, ¿Qué número eligió el ganador y cuál sería
+        su ganancia?
+    </p>
+
+    <p>
+        <strong>Solución:</strong> El ganador eligió <strong>10</strong>
+        y su ganancia sería de <strong>50 puntos</strong>.
+    </p>
+
+    <p>
+        <strong>Explicación</strong>: La media de todos los números es (10+20+20+10+30)/5 = 18.
+        Dos tercios de 18 es 12 (18/3*2 = 12). 10 es el número elegido más cercano a 12, por
+        lo que los participantes que escogieron 10 fueron los ganadores. Cada uno de ellos
+        recibiría <strong>50 puntos</strong>.
+    </p>
+
+    {% next_button %}
+
+    {% include 'beauty/Instructions.html' %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "global/Base.html" %}
+{% load otree_tags %}
+
+{% block title %}Introducción{% endblock %}
+
+{% block content %}
+{% include instructions %}
+<p>
+En la página siguiente tendrás que responder a una pregunta para asegurar de que has comprendido las instrucciones correctamente.
+</p>
+{% next_button %}
+{% endblock %}

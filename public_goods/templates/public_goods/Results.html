@@ -1,0 +1,41 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Resultados
+{% endblock %}
+
+{% block content %}
+  
+
+    <table class="table-condensed" style="width:500px; margin-top:20px;">
+        <tr><td>Has contribuído:</td><td>{{ player.contribution }}</td></tr>
+        <tr><td>El resto de participantes ha contribuído:</td><td></td></tr>
+        {% for p in player.get_others_in_group %}
+            <tr><td></td><td>{{ p.contribution }}</td></tr>
+        {% endfor %}
+
+        <tr><td>Contribución total:</td><td>{{ group.total_contribution }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Beneficios totales del proyecto:</td><td>{{ total_earnings }}</td></tr>
+        <tr><td>Tus beneficios del proyecto:</td><td>{{ group.individual_share }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>Por lo que, tus ganancias totales son:</td><td>{{ individual_earnings }}</td></tr>
+        <tr><td>Además, se suma la tarifa por participar:</td><td>{{ Constants.base_points }}</td></tr>
+
+        <tr><td colspan="2"><hr/></td></tr>
+
+        <tr><td>En suma, obtienes :</td><td>{{ player.payoff }}</td></tr>
+    </table>
+    <p></p>
+
+    {% next_button %}
+    
+    {% include 'public_goods/Instructions.html' %}
+
+
+{% endblock %}
