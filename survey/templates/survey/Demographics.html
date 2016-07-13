@@ -2,16 +2,21 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Survey
+    Preguntas
 {% endblock %}
 
 {% block content %}
 
     <p>
-        Please answer the following questions.
+        Por favor contesta a las siguientes preguntas.
     </p>
 
     {% formfield player.q_country %}
+
+    <p>
+        "España" se puede buscar como <strong>Spain</strong> en la lista.
+    </p>
+
     {% formfield player.q_age %}
     {% formfield player.q_gender %}
 

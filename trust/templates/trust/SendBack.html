@@ -2,12 +2,13 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Your Choice
+    Elección como participante B
 {% endblock %}
 
 {% block content %}
 <p>
-You are Participant B. Participant A sent you {{group.sent_amount}} and you received {{tripled_amount}}. Now you have {{tripled_amount}}. How many points will you send to participant A?
+    Eres el participante B. El participant A le envía {{group.sent_amount}} por lo que ha recibido {{tripled_amount}}.
+    Ahora tiene {{tripled_amount}} ¿Cuánto quiere enviar al participante A?
 </p>
 
     {% formfield group.sent_back_amount with label=prompt %}

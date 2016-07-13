@@ -2,28 +2,29 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Results
+    Resultados
 {% endblock %}
 
 {% block content %}
 <p>
 {% if player.role == 'A' %}
-You chose to send participant B <strong>{{group.sent_amount}}</strong>. Participant B returned <strong>{{group.sent_back_amount}}</strong>.
+Ha elegido enviar al participante B <strong>{{group.sent_amount}}</strong>. El participante B ha devuelto <strong>{{group.sent_back_amount}}</strong>.
 </p>
 <p>
-You were initially endowed with <strong>100 points</strong>, chose to send <strong>{{group.sent_amount}}</strong>, received <strong>{{group.sent_back_amount}}</strong> thus you now have <strong>(100 points)-{{group.sent_amount}}+{{group.sent_back_amount}}={{result}}</strong>.
+Inicialmente tiene <strong>100 puntos</strong>, va a enviar <strong>{{group.sent_amount}}</strong>, recibiendo del otro participante <strong>{{group.sent_back_amount}}</strong> por lo que tiene <strong>(100 puntos)-{{group.sent_amount}}+{{group.sent_back_amount}}={{result}}</strong>.
 {% else %}
-Participant A sent you <strong>{{group.sent_amount}}</strong>. They were tripled so you received <strong>{{tripled_amount}}</strong>. You chose to return <strong>{{group.sent_back_amount}}</strong>.
+El participante A le ha enviado: <strong>{{group.sent_amount}}</strong>. La cantidad ha sido triplicada automáticamente por lo que ha recibido: <strong>{{tripled_amount}}</strong>. Ha elegido devolver al participante A: <strong>{{group.sent_back_amount}}</strong>.
 </p>
 <p>
-You were initially endowed with <strong>0 points</strong>, received <strong>{{tripled_amount}}</strong>, chose to return <strong>{{group.sent_back_amount}}</strong> thus you now have <strong>({{tripled_amount}})-({{group.sent_back_amount}})=({{result}})</strong>.
+Inicialmente tenía <strong>0 puntos</strong>, ha enviado  <strong>{{tripled_amount}}</strong>. El participante B ha elegido devolverle <strong>{{group.sent_back_amount}}</strong> por lo que tiene finalmente <strong>({{tripled_amount}})-({{group.sent_back_amount}})=({{result}})</strong>.
 {% endif %}
 </p>
 <p>
-In addition, you received {{Constants.bonus}} for participation. Therefore, your total payoff is <strong>{{player.payoff}}</strong>.
+Además, recibirá {{Constants.bonus}} por su participación en el experimento. Con todo, tus pagos finales son <strong>{{player.payoff}}</strong>.
 </p>
 
 <p>{% next_button %}</p>
+
 
     {% include instructions %}
 

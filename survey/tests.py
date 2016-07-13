@@ -17,7 +17,7 @@ class PlayerBot(Bot):
         self.submit(views.Demographics, {
             'q_country': 'BS',
             'q_age': 24,
-            'q_gender': 'Male'})
+            'q_gender': 'Hombre'})
 
         self.submit(views.CognitiveReflectionTest, {
             'crt_bat': 10,

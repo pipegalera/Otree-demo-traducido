@@ -147,7 +147,7 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'trust',
-        'display_name': "Trust Game",
+        'display_name': "Juego de Confianza",
         'num_demo_participants': 2,
         'app_sequence': ['trust', 'payment_info'],
     },
@@ -166,13 +166,13 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'survey',
-        'display_name': "Survey",
+        'display_name': "Preguntas de compresión lectora (survey)",
         'num_demo_participants': 1,
         'app_sequence': ['survey', 'payment_info'],
     },
     {
         'name': 'prisoner',
-        'display_name': "Prisoner's Dilemma",
+        'display_name': "Dilema del Prisionero",
         'num_demo_participants': 2,
         'app_sequence': ['prisoner', 'payment_info'],
     },

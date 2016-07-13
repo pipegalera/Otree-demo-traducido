@@ -33,7 +33,7 @@ class Feedback1(Page):
 
     def vars_for_template(self):
         return {'num_q': 1,
-                'question': 'Suppose Alice chose to defect and Bob chose to cooperate. How many points would Alice and Bob receive, respectively?',
+                'question': 'Supongamos que Alicia decidió no cooperar y Juan optó por cooperar, ¿Cuántos puntos recibirían Alicia y Juan, respectivamente?',
                 }
 
 class Decision(Page):
@@ -47,7 +47,7 @@ class ResultsWaitPage(WaitPage):
 
 
 
-    body_text = 'Waiting for the other participant to choose.'
+    body_text = 'Esperando al resto de participantes.'
 
     def after_all_players_arrive(self):
         for p in self.group.get_players():

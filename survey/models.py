@@ -33,13 +33,13 @@ class Player(BasePlayer):
         """Calculate payoff, which is zero for the survey"""
         self.payoff = 0
 
-    q_country = CountryField(verbose_name='What is your country of citizenship?')
-    q_age = models.PositiveIntegerField(verbose_name='What is your age?',
+    q_country = CountryField(verbose_name='¿De qué país eres?')
+    q_age = models.PositiveIntegerField(verbose_name='¿Cuál es tu edad?',
                                         choices=range(13, 125),
                                         initial=None)
     q_gender = models.CharField(initial=None,
-                                choices=['Male', 'Female'],
-                                verbose_name='What is your gender?',
+                                choices=['Hombre', 'Mujer'],
+                                verbose_name='¿Eres hombre o mujer?',
                                 widget=widgets.RadioSelect())
 
     crt_bat = models.PositiveIntegerField()

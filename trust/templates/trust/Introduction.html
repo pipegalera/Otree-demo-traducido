@@ -2,29 +2,28 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Introduction
+    Introducción
 {% endblock %}
 
 {% block content %}
 
     <p>
-        You have been randomly and anonymously paired with another player.
+        Ha sido emparejado anónimamente y al azar con otro participante.
     </p>
 
     <p>
-        Each will be given the same initial sum of {{ amount_allocated }}.
-        Then, one of you will be selected at random and given the opportunity to give part of the sum to the other player.
-        Before the chosen amount reaches the second player, it will automatically be tripled by the experimenter.
-        In other words, the second player will receive three times the amount originally given by the first player.
+        Cada uno ha recibido la misma cantidad de puntos iniciales de {{ amount_allocated }}.
+        Uno de ustedes será seleccionado al azar y tendrá la oportunidad de dar parte o el total de la cantidad al otro
+        participante.
+        Antes de que la cantidad elegida llegue al segundo participante, automáticamente será triplicada. Es decir, el
+        segundo participante recibirá el triple de la cantidad enviada.
     </p>
 
     <p>
-        The second player will then be given a similar opportunity, namely to give part of the now-tripled sum back to the first player.
+        El segundo participante tendrá una oportunidad similar de devolver parte de la cantidad de puntos obtenida al
+        primer participante, que la recibirá integramente (sin ser multiplicada).
     </p>
 
-    <p>
-        Please click "Next" to proceed.
-    </p>
 
     {% next_button %}
 

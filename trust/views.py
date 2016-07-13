@@ -25,10 +25,9 @@ class Question1(Page):
     form_model = models.Player
     form_fields = ['training_answer_x', 'training_answer_y']
     question = (
-        'Suppose that participant A sent 20 points to participant B. '
-        'Having received the tripled amount, participant B sent 50 points to '
-        'participant A. In the end, how many points would participant A and B '
-        'have?'
+        'Suponga que el participante A le envía 20 puntos al participante B. '
+        'Habiendo recibido la cantidad triplicada, el participante B envía 50 puntos al '
+        'participante A. Finalmente, ¿Cuántos puntos tendrían el participante A y B? '
     )
 
     def is_displayed(self):
@@ -90,9 +89,10 @@ class SendBack(Page):
 
 class ResultsWaitPage(WaitPage):
 
-
     def after_all_players_arrive(self):
         self.group.set_payoffs()
+
+    body_text = "Esperando a los otros participantes."
 
 
 class Results(Page):

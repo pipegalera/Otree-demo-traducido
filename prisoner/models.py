@@ -32,10 +32,10 @@ class Constants(BaseConstants):
     base_points = c(50)
 
     training_1_choices = [
-        'Alice gets 300 points, Bob gets 0 points',
-        'Alice gets 200 points, Bob gets 200 points',
-        'Alice gets 0 points, Bob gets 300 points',
-        'Alice gets 100 points, Bob gets 100 points'
+        'Alicia obtiene 300 puntos, Juan obtiene 0 puntos',
+        'Alicia obtiene 200 puntos, Juan obtiene 200 puntos',
+        'Alicia obtiene 0 puntos, Juan obtiene 300 puntos',
+        'Alicia obtiene 100 puntos, Juan obtiene 100 puntos',
     ]
 
 

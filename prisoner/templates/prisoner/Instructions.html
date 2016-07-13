@@ -6,30 +6,32 @@
     <link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
 
     <p>
-        In this study, you will be randomly and anonymously paired with another participant.
-        Each of you simultaneously and privately chooses whether you want to cooperate or defect.
-        Your payoffs will be determined by the choices of both as below:
+        En el experimento, vas a ser emparejado anónimamente y al azar con otro participante.
+        Cada uno eligirá de forma privada si quiere cooperar con el otro participante.
+        Cada uno debe tomar una decisión independiente y simultánea.
+        Tus beneficios serán fijados por ambas decisiones como se muestra a continuación:
+
     </p>
-    <p><i>In each cell, the amount (in points) to the left is the payoff for you and to the right for the other participant.</i></p>
+    <p><i>En cada celda, la cantidad (en puntos) a la izquierda es la recompensa para usted y hacia la derecha para el otro participante.</i></p>
 
     <table class='table table-bordered text-center' style='width: auto; margin: auto'>
         <tr>
             <th colspan=2 rowspan=2></th>
-            <th colspan=2>The Other Participant</th>
+            <th colspan=2>El Otro Participante</th>
         </tr>
         <tr>
-            <th>Cooperate</th>
-            <th>Defect</th>
+            <th>Cooperar</th>
+            <th>No cooperar</th>
         </tr>
         <tr>
-            <th rowspan=2><span class="rotate90">You</span></th>
-            <th>Cooperate</th>
+            <th rowspan=2><span class="rotate90">Usted</span></th>
+            <th>Cooperar</th>
             <td>{{Constants.cooperate_amount}}, {{Constants.cooperate_amount}}</td>
-            <td>0 point, {{Constants.defect_cooperate_amount}}</td>
+            <td>0 puntos, {{Constants.defect_cooperate_amount}}</td>
         </tr>
         <tr>
-            <th>Defect</th>
-            <td>{{Constants.defect_cooperate_amount}}, 0 point</td>
+            <th>No cooperar</th>
+            <td>{{Constants.defect_cooperate_amount}}, 0 puntos</td>
             <td>{{Constants.defect_amount}}, {{Constants.defect_amount}}</td>
         </tr>
     </table>
