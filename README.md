@@ -23,7 +23,7 @@ juegos quedaran más claras.
 
 * **Generales**: no sé cómo cambiar al castellano: temporizador, el texto de espera en waitpage, botones "Next", Yes/No o points. Imagino que estará en alguna libreria.
 * **Survey**: no sé cómo programar la lista de países en castellano.
-* **Dilema del prisionero**: Fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
+* **Dilema del prisionero**: en la fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
 * **Juego Agente-Principal**: es muy complicado el juego para que si quiera puedan saber que están haciendo los participantes. Hay que explicarlo mejor.
 
 ## FALLOS SOLUCIONADOS
