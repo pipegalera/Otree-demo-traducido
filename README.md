@@ -1,24 +1,26 @@
-# oTree
+# Traducción al castellano de oTree
 
-## Live demo
+## Puedes ver el funcionamiento de oTree en esta demo en inglés
 http://demo.otree.org/
 
-## Homepage
+## Página oficial
 http://www.otree.org/
 
-## About
+## Repositorio oficial
+https://github.com/oTree-org/otree-core
 
-oTree is a Django-based framework for implementing multiplayer decision strategy games.
-Many of the details of writing a web application are abstracted away,
-meaning that the code is focused on the logic of the game.
-oTree programming is accessible to programmers without advanced experience in web app development.
+## Sobre este proyecto
 
-This repository contains the games; the oTree core libraries are [here](https://github.com/oTree-org/otree-core).
+Los juegos íntegramente están programados en inglés. Las instrucciones han sido traducidas al castelleno y pueden descargarlas.
+Mencionar que han sido elaboradas para el centro de investigación CSIC-CCHS (http://cchs.csic.es/) pero su uso es totalmente libre y compartido.
+Los juegos pueden contener pequeñas erratas de traducción, así que ruego por favor revisar las traducciones en caso de su uso. ***No soy programador***
+así que he procurado no modificar el código original y limitarme a incluir códigos méramente indicativos para que las instrucciones de los
+juegos quedaran más claras.
 
-## Quick start
 
-Rather than cloning this repo directly,
-run these commands:
+## Instalar oTree original: Guía rápida
+
+Corra los siguientes comandos:
 
 ```
 pip install --upgrade otree-core
@@ -26,16 +28,15 @@ otree startproject oTree
 otree resetdb
 otree runserver
 ```
-## Contact & support
 
-[Help & discussion mailing list](https://groups.google.com/forum/#!forum/otree)
+Puede descargar este repositorio y superponer la carpeta orinal o ejecutar "otree runserver" desde este repositorio descargado
 
-You can also contact chris@otree.org,
-though general support questions should be sent to the mailing list first.
+## Contacto
 
-**Please contact me if any part of oTree does not work for you (or is unclear).**
+Si existe algún fallo que pueda corregir o tiene alguna duda por favor escríbame e intentaré ayudar en la medida que pueda: pipegalera@gmail.com
 
-## Contributors
+
+## Contribuidores del proyecto original de oTree
 
 * Gregor Muellegger (http://gremu.net/, https://github.com/gregmuellegger)
 * Juan B. Cabral (http://jbcabral.org/, https://github.com/leliel12)
@@ -44,7 +45,7 @@ though general support questions should be sent to the mailing list first.
 * Alexander Sandukovskiy
 * Som Datye
 
-# Docs
+# Más información y guía del programa
 
 http://otree.readthedocs.org
 
