@@ -78,7 +78,7 @@ DEMO_PAGE_INTRO_TEXT = """
         </a> de los juegos originales.
     </li>
     <li>
-        <a href="https://github.com/pipegalera/oTree-samples-in-Spanish" target="_blank">
+        <a href="https://github.com/pipegalera/Otree-demo-traducido" target="_blank">
             C&oacute;digo fuente
         </a> de los juegos traducidos.
     </li>
@@ -178,20 +178,20 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'ultimatum',
-        'display_name': "Ultimatum (randomized: strategy vs. direct response)",
+        'display_name': "Ultimatum (aleatorio: estratégia vs. respuesta directa)",
         'num_demo_participants': 2,
         'app_sequence': ['ultimatum', 'payment_info'],
     },
     {
         'name': 'ultimatum_strategy',
-        'display_name': "Ultimatum (strategy method treatment)",
+        'display_name': "Ultimatum (con estratégia)",
         'num_demo_participants': 2,
         'app_sequence': ['ultimatum', 'payment_info'],
         'treatment': 'strategy',
     },
     {
         'name': 'ultimatum_non_strategy',
-        'display_name': "Ultimatum (direct response treatment)",
+        'display_name': "Ultimatum (con respuesta directa)",
         'num_demo_participants': 2,
         'app_sequence': ['ultimatum', 'payment_info'],
         'treatment': 'direct_response',
@@ -206,19 +206,19 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'vickrey_auction',
-        'display_name': "Vickrey Auction",
+        'display_name': "Subasta Vickrey",
         'num_demo_participants': 3,
         'app_sequence': ['vickrey_auction', 'payment_info'],
     },
     {
         'name': 'volunteer_dilemma',
-        'display_name': "Volunteer's Dilemma",
+        'display_name': "Dilema del Voluntario",
         'num_demo_participants': 3,
         'app_sequence': ['volunteer_dilemma', 'payment_info'],
     },
     {
         'name': 'cournot_competition',
-        'display_name': "Cournot Competition",
+        'display_name': "Duopolio de Cournot",
         'num_demo_participants': 2,
         'app_sequence': [
             'cournot_competition', 'payment_info'
@@ -226,7 +226,7 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'principal_agent',
-        'display_name': "Principal Agent",
+        'display_name': "Juego Agente-Principal",
         'num_demo_participants': 2,
         'app_sequence': ['principal_agent', 'payment_info'],
     },

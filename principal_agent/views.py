@@ -67,9 +67,9 @@ class OfferWaitPage(WaitPage):
 
     def body_text(self):
         if self.player.role() == 'agent':
-            return "You are Participant B. Waiting for Participant A to propose a contract."
+            return "Usted es el Participante B. Espere a que el Participante A le ofrezca un contrato."
         else:
-            return "Waiting for Participant B."
+            return "Espere a que el Participante B decida."
 
 
 class Accept(Page):

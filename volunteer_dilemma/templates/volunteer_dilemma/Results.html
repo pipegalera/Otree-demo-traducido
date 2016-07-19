@@ -2,21 +2,21 @@
 {% load otree_tags %}
 
 {% block title %}
-    Results
+    Resultados
 {% endblock %}
 
 
 {% block content %}
 <p>
 {% if player.volunteer %}
-You volunteered. As a result, your payoff is <strong>100-40=60 points</strong>.
+Ha sido el voluntario, por lo que sus beneficios son <strong>100-40=60 puntos</strong>.
 {% elif num_volunteers > 0 %}
-You did not volunteer but some did. As a result, your payoff is <strong>100 points</strong>. 
+No ha sido voluntario, pero alguien ha elegido serlo por lo que su pago es de <strong>100 puntos</strong>.
 {% else %}
-You did not volunteer and no one did. As a result, your payoff is <strong>0 points</strong>.
+Nadie ha elegido ser voluntario por lo que sus beneficios son de <strong>0 puntos</strong>.
 {% endif %}
-In addition, you received 10 points for participation.
-Thus, your total payoff is <strong>{{player.payoff}}</strong>.
+Además de este pago, recibirá 10 puntos por su participación en el experimento.
+En total, su beneficio es de <strong>{{player.payoff}}</strong>.
 </p>
 
 <p>{% next_button %}</p>

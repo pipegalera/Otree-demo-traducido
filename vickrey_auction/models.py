@@ -81,18 +81,18 @@ class Player(BasePlayer):
 
     private_value = models.CurrencyField(
         null=True,
-        doc="How much the player values the item, generated randomly"
+        doc="Cuánto valora el participante el objeto (aletorio)"
     )
 
     bid_amount = models.CurrencyField(
         null=True,
         min=Constants.min_allowable_bid, max=Constants.max_allowable_bid,
-        doc="Amount bidded by the player"
+        doc="Cantidad apostada por el participante"
     )
 
     is_winner = models.BooleanField(
         initial=False,
-        doc="""Indicates whether the player is the winner"""
+        doc="""Indica si el participante es el ganador"""
     )
 
     training_question_1_my_payoff = models.CurrencyField()

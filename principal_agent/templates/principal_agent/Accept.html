@@ -2,23 +2,23 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Response
+    Respuesta
 {% endblock %}
 
 {% block content %}
 
 
 
-    <p>You are <strong>Player B</strong>. Player A has offered you a contract with the following details:</p>
+    <p>Usted es el <strong>Participante B</strong>.El Participante A le ofrece un contrato con las siguientes características:</p>
 
     <table class='table text-center' style='width: auto; margin: auto'>
-        <tr><th>Fixed payment</th><th>Return share</th></tr>
+        <tr><th>Pago Fijo</th><th>Retorno Base</th></tr>
         <tr><td>{{ group.agent_fixed_pay }}</td><td>{{ group.return_share_as_percentage }}%</td></tr>
     </table>
 
-    {% formfield group.contract_accepted with label='Will you accept or reject the above contract?' %}
+    {% formfield group.contract_accepted with label='¿Acepta o rechaza este contrato?' %}
     <div id=effort>
-    {% formfield group.agent_work_effort with label='Please choose your level of effort' %}
+    {% formfield group.agent_work_effort with label='Por favor, elija su nivel de esfuerzo' %}
     </div>
     <p id=calculate></p>
     <p>

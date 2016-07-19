@@ -2,30 +2,28 @@
 
 {% block instructions %}
 <p>
-You have been randomly and anonymously paired with another player. Each of you will be given 30 points to start and be randomly assigned to be Participant A or Participant B. You will learn your role before making any decision.
+    Ha sido emparejado al azar con otro participante de forma anónima. Cada uno recibirá 30 puntos al empezar y será denominado aleatoriamente como "Participante A" o "Participante B". Antes de tomar ninguna decisión, se le mostrará su rol.
 </p>
 <p>
-Participant A will propose a contract to B. The contract includes two figures (in points) that must be chosen as follows:
-</p>
-<ul>
-    <li><strong>Fixed Payment</strong>, which can be any number from -30 to 30</li>
-    <li><strong>Return Share</strong>, which can be a multiple of 10%, that is 10%, 20%, … , 90%, or 100%</li>
-</ul>
-<p>
-Note that a negative fixed payment means that Participant B will have to pay the amount to Participant A.
-</p>
-<p>
-Once Participant A has submitted the contract, Participant B must decide whether to accept or to reject it. If rejected, A will receive nothing while B will receive 10 points. If accepted, Participant B then chooses:
+    El juego funciona de la siguiente manera. El Participante A propone un contrato al Participante B. El contrato incluye 2 cantidades (en puntos) que tiene que ser elegidas de la siguiente forma:
 </p>
 <ul>
-    <li><strong>Effort Level</strong>, which can be any whole number from 1 to 10</li>
+    <li><strong>Pago Fijo</strong>, que puede ser una cantidad de -30 a 30. Ten en cuenta que una cantidad negativa significa que el Participante B tendrá que pagar esa cantidad al Participante A</li>
+    <li><strong>Retorno Base</strong>, que puede ser un múltiplo de 10%, como 10%, 20%, … , 90%, or 100%</li>
+</ul>
+
+<p>
+    Una vez que el Participante A ha presentado su oferta de contrato, el Participante B decide si aceptarla o rechazarla. Si es <strong>rechazada</strong>, el Participante A no recibe nada mientras que el Participante B recibe 10 puntos. Si la oferta es <strong>aceptada</strong> el Participante B elige:
+</p>
+<ul>
+    <li><strong>Nivel de Esfuerzo</strong>, que puede ir de 1 a 10</li>
 </ul>
 <p>
-Effort is costly only to Participant B and determines the total return, which will be apportioned according to the proposed return share. <i>The following table shows the relationship between B's effort, the cost of effort, and the resulting total return (in points):</i>
+    Este esfuerzo es costoso solo para el participante B. <i> La siguiente tabla muestra la relación entre el esfuerzo que decida el Participante B, el coste de este esfuerzo y el retorno total resultante:</i>
 </p>
 <table class=table>
     <tr>
-        <th>Effort Level</th>
+        <th>Nivel de Esfuerzo</th>
         <td>1</td>
         <td>2</td>
         <td>3</td>
@@ -38,7 +36,7 @@ Effort is costly only to Participant B and determines the total return, which wi
         <td>10</td>
     </tr>
     <tr>
-        <th>Effort Cost</th>
+        <th>Coste del Esfuerzo</th>
         <td>0</td>
         <td>4</td>
         <td>8</td>
@@ -51,7 +49,7 @@ Effort is costly only to Participant B and determines the total return, which wi
         <td>60</td>
     </tr>
     <tr>
-        <th>Total Return</th>
+        <th>Retorno Total</th>
         <td>14</td>
         <td>28</td>
         <td>42</td>
@@ -65,12 +63,16 @@ Effort is costly only to Participant B and determines the total return, which wi
     </tr>
 </table>
 <p>
-Given that the contract is accepted, Participant A will receive:<br />
-<strong>(100% – [B’s Return Share in %]) × [Total Return] – [B’s Fixed Payment]</strong><br />
-and Participant B will receive:<br />
-<strong>[B's Return Share in %] × [Total Return] + [B's Fixed Payment] – [B's Effort Cost]</strong>
+Dado que el contrato es aceptado, el Participante A recibirá:
+
+    <br /><strong>(100% – [Retorno Base en % de B]) × [Retorno Total] – [Pago Fijo de B]</strong><br />
+
+y el Participante B recibirá:
+
+    <br /><strong>[Retorno Base en % de B] × [Retorno Total] + [Pago Fijo de B] – [Coste de Esfuerzo de B]</strong>
 </p>
 <p>
-Your payoff from the study is the initial 30 points plus what you receive.
+Su beneficio en este experimento será los puntos que reciba en función de sus decisiones y su rol, además de los 30 puntos iniciales.
 </p>
+
 {% endblock %}

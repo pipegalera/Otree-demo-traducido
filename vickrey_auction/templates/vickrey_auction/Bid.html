@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Bid
+    Apuesta
 {% endblock %}
 
 {% block styles %}
@@ -59,16 +59,16 @@ jQuery(document).ready(function ($) {
 {% block content %}
 
     <p>
-        Your value to the object is <strong>{{ player.private_value }}</strong>.
+        Su valoración del objeto es de <strong>{{ player.private_value }}</strong>.
     </p>
 
     <div class="form-group required">
-        <label class="control-label" for="id_bid_amount">Please submit a bid for the object (from 0 to 100):</label>
+        <label class="control-label" for="id_bid_amount">Por favor, apueste por el objeto una cantidad de puntos de 0 a 100:</label>
         <div class="controls">
             <input type="hidden" name="bid_amount" id="id_bid_amount" value="0">
             <div class="bid-slider"></div>
-            <div class="bid">Your bid: <strong><span class="bid-value"></span> points</strong></div>
-            <div class="payoff">If you win the auction, you would have a payoff of <strong><span class="payoff-value"></span> points - Second highest bid</strong>.</div>
+            <div class="bid">Tu apuesta es de: <strong><span class="bid-value"></span> puntos</strong></div>
+            <div class="payoff">Si gana la subasta obtendrá un beneficio de <strong><span class="payoff-value"></span> puntos, menos la segunda mayor apuesta </strong>.</div>
         </div>
     </div>
 

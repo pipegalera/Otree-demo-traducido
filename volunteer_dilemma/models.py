@@ -57,7 +57,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     training_my_payoff = models.CurrencyField(
-        verbose_name='My payoff would be')
+        verbose_name='Mi beneficio sería de')
 
     volunteer = models.BooleanField(
         doc="""Whether player volunteers""",

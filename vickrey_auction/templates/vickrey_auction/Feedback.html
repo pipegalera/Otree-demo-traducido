@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Solution to Understanding Question {{ num_q }} of {{ total_q }}
+    Solución a la Pregunta de Entendimiento {{ num_q }} de {{ total_q }}
 {% endblock %}
 
 {% block content %}
@@ -10,26 +10,23 @@
 
 
     {% if player.is_training_question_1_my_payoff_correct %}
-        <p class="text-success">Your answer {{player.training_question_1_my_payoff}} was correct.</p>
+        <p class="text-success">Su respuesta "{{player.training_question_1_my_payoff}}" es correcta.</p>
     {% else %}
-        <p class="text-danger">Your answer {{player.training_question_1_my_payoff}} was incorrect</p>
+        <p class="text-danger">Su respuesta "{{player.training_question_1_my_payoff}}" es incorrecta</p>
     {% endif %}
 
 
     <p>
-        Suppose that your value to the object was 65 points and you bid 60.
-        The other 2 participants bid 55 and 45 respectively.
-        What would be your payoff?
+        Suponga que la valoración del objeto era 60 y su apuesta de 60. Los otros 2 participantes apostaron 55 y 45,
+        respectivamente, ¿Cuál es tu beneficio?
     </p>
     <p>
-        <strong>Solution: {{Constants.training_question_1_my_payoff_correct}}.</strong>
+        <strong>Solución: {{Constants.training_question_1_my_payoff_correct}}.</strong>
     </p>
     <p>
-        <strong>Explanation:</strong> You bid 60 which was the highest among
-        all bids (60, 55, 45), thus you won the object. You paid the second
-        highest bid, which was <strong>55</strong>. Since the object valued
-        <strong>65</strong> to you, your payoff was
-        <strong>100+65-55={{Constants.training_question_1_my_payoff_correct}}</strong>.
+        <strong>Explicación:</strong> Ha apostado la apuesta más alta de todas pero empatada con otra igual de alta (60, 60, 55), por lo que
+        se resulve por azar tirando una moneda y resulta que gana la subasta del objeto. La segunda apuesta (no empatada) más alta ha sido de <strong>55</strong>.
+        Como valora el objeto como <strong>65</strong>, su beneficio final es <strong>100+65-55={{Constants.training_question_1_my_payoff_correct}}</strong>.
     </p>
 
     {% next_button %}

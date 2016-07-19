@@ -2,47 +2,47 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Results
+    Resultados
 {% endblock %}
 
 {% block content %}
 
-    <p>The results are shown in the following table.</p>
+    <p>Los resultados se muestran en la siguiente tabla.</p>
 
     <table class="table table-test" style="width:400px; margin-bottom:10px">
 
         <tr>
-            <td>Your firm produced:</td>
-            <td>{{ player.units }} units</td>
+            <td>Tu empresa produce:</td>
+            <td>{{ player.units }} unidades</td>
         </tr>
 
         <tr>
-            <td>The other firm produced:</td>
-            <td>{{ player.other_player.units }} units</td>
+            <td>La otra empresa produce:</td>
+            <td>{{ player.other_player.units }} unidades</td>
         </tr>
 
         <tr>
-            <td>Total production:</td>
-            <td>{{ group.total_units }} units</td>
+            <td>La producción conjunta es de:</td>
+            <td>{{ group.total_units }} unidades</td>
         </tr>
 
         <tr>
-            <td style="border-top-width:4px">Unit selling price:</td>
+            <td style="border-top-width:4px">El precio de venta es de:</td>
             <td style="border-top-width:4px">{{ Constants.total_capacity }} – {{ group.total_units }} = {{ group.price }}</td>
         </tr>
 
         <tr>
-            <td>Your profit:</td>
+            <td>Tus beneficios son de:</td>
             <td>{{ player.payoff }}</td>
         </tr>
 
         <tr>
-            <td style="border-top-width:4px">In addition, you get a participation fee:</td>
+            <td style="border-top-width:4px">Además, recibirás una compensación por participar de:</td>
             <td style="border-top-width:4px">{{ Constants.base_points }}</td>
         </tr>
 
         <tr>
-            <td style="border-top-width:4px">In total, you receive:</td>
+            <td style="border-top-width:4px">En total, tus beneficios son:</td>
             <td style="border-top-width:4px">{{ total_plus_base }}</td>
         </tr>
 

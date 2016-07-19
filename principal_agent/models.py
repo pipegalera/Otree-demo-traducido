@@ -104,14 +104,14 @@ class Group(BaseGroup):
     agent_fixed_pay = models.CurrencyField(
         doc="""Amount offered as fixed pay to agent""",
         min=Constants.min_fixed_payment, max=Constants.max_fixed_payment,
-        verbose_name='Fixed Payment (from %i to %i)' % (
+        verbose_name='Pago Fijo (de %i a %i)' % (
             Constants.min_fixed_payment, Constants.max_fixed_payment)
     )
 
     agent_return_share = models.FloatField(
         choices=Constants.agent_return_share_choices,
         doc="""Agent's share of total return""",
-        verbose_name='Return Share',
+        verbose_name='Retorno Base',
         widget=widgets.RadioSelectHorizontal()
     )
 
@@ -160,9 +160,9 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     training_my_payoff = models.CurrencyField(
-        verbose_name='I would receive')
+        verbose_name='Recibiría un pago de')
     training_other_payoff = models.CurrencyField(
-        verbose_name='Participant B would receive')
+        verbose_name='El Participante B recibiría un pago de')
 
     def role(self):
         if self.id_in_group == 1:

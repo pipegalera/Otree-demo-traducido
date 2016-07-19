@@ -28,8 +28,8 @@ class Constants(BaseConstants):
     # Total production capacity of all players
     total_capacity = 60
     max_units_per_player = int(total_capacity / players_per_group)
-    feedback1_question = """Suppose firm Q produced 20 units and firm P produced 30 units. What would be the profit for firm P?"""
-    feedback1_explanation=  """Total units produced were 20 + 30 = 50. The unit selling price was 60 – 50 = 10. The profit for firm P would be the product of the unit selling price and the unit produced by firm P, that is 10 × 30 = 300"""
+    feedback1_question = """Suponga que en este experimento, la empresa A produce 20 unidades mientras que la B produce 30 unidades, ¿Cuál es el beneficio para la empresa B?"""
+    feedback1_explanation=  """El total de producción es 20 + 30 = 50. El precio por unidad es de {{ total_capacity }} – 50 = 10. Los beneficios para la empresa B serían la cantidad producida (vendida) por su precio de venta: 30 x 10 = 300"""
 
 class Subsession(BaseSubsession):
 

@@ -13,39 +13,38 @@
 <div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
 
     <h3 class="panel-sub-heading">
-        Instructions
+        Instrucciones
     </h3>
 
     <p>
-        You have been randomly and anonymously paired with another participant.
-        Each of you will represent a firm. Both firms manufacture the same product.
+        En este estudio, vas a ser emparejado al azar con otro participante de forma anónima. Cada participante representa una empresa,
+        y cada empresa produce el mismo producto sin ningún coste.
     </p>
 
     <p>
-        The two of you decide simultaneously and independently how many units to manufacture.
-        Your choices can be any number from 0 to {{ max_units_per_player }}.
-        All produced units will be sold, but the more is produced, the lower the unit selling price will be.
+        Cada participante decide de forma anónima la cantidad de producción que quiere hacer, de 0 a {{ max_units_per_player }}.
+        Toda la cantidad que produzcas será vendida pero tenga en cuenta que cuantas más unidades produzca menor será su precio de venta.
     </p>
 
 
     <p>
-        The unit selling price is:
-    </p>
-
-    <ul>
-        <strong>Unit selling price = {{ total_capacity }} – Units produced by your firm – Units produced by the other firm</strong>
-    </ul>
-
-    <p>
-        Your profit, measured in points, is therefore:
+        El precio de venta por unidad es:
     </p>
 
     <ul>
-        <strong>Your profit = Unit selling price × Units produced by your firm</strong>
+        <strong>Precio por unidad = {{ total_capacity }} – "Unidades producidas por tu empresa" – "Unidades producidas por la otra empresa"</strong>
     </ul>
 
     <p>
-        For your convenience, these instructions will remain available to you on all subsequent screens of this study.
+        Tus beneficios, medidos en puntos, son:
+    </p>
+
+    <ul>
+        <strong>Beneficios= "Precio por unidad" × "Unidades producidas"</strong>
+    </ul>
+
+    <p>
+        Para su comodidad, estas instrucciones permaneceran visibles durante todo el experimento.
     </p>
 
 </div>

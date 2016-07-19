@@ -25,8 +25,8 @@ class Question1(Page):
     form_model = models.Player
     form_fields = ['training_my_payoff']
 
-    question = '''Suppose you and another participant volunteered while
-                the other participant did not. What would be your payoff?'''
+    question = '''Suponga una situación en la que cada participante toma su elección de forma anónima y dos jugadores deciden ser voluntarios mientras que usted decide no serlo,
+                    ¿Cuál sería la cantidad de beneficio que recibiría usted?'''
 
     def is_displayed(self):
         return self.subsession.round_number == 1
@@ -48,11 +48,11 @@ class Feedback1(Page):
         return {
             'answer': [p.training_my_payoff, c(60)],
             'explanation': mark_safe(Question1.question + '''
-            <strong>Solution:</strong> Your payoff would be <strong>60 points</strong>.
-            <strong>Explanation:</strong> As at least one (actually 2)\
-            participants volunteered, everyone received <strong>100</strong>\
-            points. You volunteered, so you had to pay <strong>40</strong>\
-            points. Together you had <strong>100-40=60</strong> points.''')
+            <strong>Solución:</strong> Su benefición sería de <strong>60 puntos</strong>.
+            <strong>Explicación:</strong> Al menos un (de hecho 2)\
+            participante se han ofrecido voluntarios, por lo que todos reciben <strong>100</strong>\
+            puntos. Ha sido voluntario, por lo que paga <strong>40</strong>\
+            puntos. Junto a la recompensa, obtiene <strong>100-40=60</strong> puntos.''')
         }
 
 
