@@ -18,6 +18,19 @@ así que he procurado no modificar el código original y limitarme a incluir có
 juegos quedaran más claras.
 
 
+## FALLOS NO SOLUCIONADOS
+
+
+* **Generales**: no sé cómo cambiar al castellano: temporizador, el texto de espera en waitpage, botones "Next", Yes/No o points. Imagino que estará en alguna libreria.
+* **Survey**: no sé cómo programar la lista de países en castellano.
+* **Dilema del prisionero**: Fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
+* **Juego Agente-Principal**: es muy complicado el juego para que si quiera puedan saber que están haciendo los participantes. Hay que explicarlo mejor.
+
+## FALLOS SOLUCIONADOS
+
+* **Subasta Vickrey**: las pregutnas para entender el juego no correspondian con su solución.
+* **Dilema del Voluntario**: las pregutnas para entender el juego no correspondian con su solución.
+
 ## Instalar oTree original: Guía rápida
 
 Corra los siguientes comandos:
@@ -29,7 +42,7 @@ otree resetdb
 otree runserver
 ```
 
-Puede descargar este repositorio y superponer la carpeta orinal o ejecutar "otree runserver" desde este repositorio descargado
+Puede descargar este repositorio y superponer la carpeta original o ejecutar "otree runserver" desde este repositorio descargado.
 
 ## Contacto
 
