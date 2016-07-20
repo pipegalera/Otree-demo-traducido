@@ -17,22 +17,22 @@ Los juegos pueden contener pequeñas erratas de traducción, así que ruego por 
 así que he procurado no modificar el código original y limitarme a incluir códigos méramente indicativos para que las instrucciones de los
 juegos quedaran más claras.
 
-
-## FALLOS NO SOLUCIONADOS
-
-
-* **Generales**: no sé cómo cambiar al castellano como el temporizador, el texto de espera en waitpage, botones "Next", Yes/No o points. Imagino que estará en alguna libreria. Por favor, si se corrige el botón "Next" modifique global/Introduccition para quitar la frase Por favor, pulse "Next" para avanzar.
-* **Survey**: no sé cómo programar la lista de países en castellano.
-* **Dilema del prisionero**: en la fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
-* **Juego Agente-Principal**: es muy complicado el juego para que si quiera puedan saber que están haciendo los participantes. Hay que explicarlo mejor.
-* **Matching Pennies**: ResultsWaitPage y puntos en resultados en inglés.
-* **Traveler Dilemmma**: ResultsWaitPage y puntos en resultados en inglés.
-
 ## FALLOS SOLUCIONADOS
 
 * **Subasta Vickrey**: las pregutnas para entender el juego no correspondían con su solución.
 * **Dilema del Voluntario**: las pregutnas para entender el juego no correspondían con su solución.
 * **Dilema del viajero**: {{Constants.reward}} estaba intercambiado erroenamente con {{Constants.pemalty}} en las isntrucciones. No afectaba ya que constants.reward y constants.penalty eran el mismo valor. en Resultados modificado
+
+## FALLOS NO SOLUCIONADOS
+
+* **Generales**: no sé cómo cambiar al castellano como el temporizador, el texto de espera en ResultsWaitPage, botones de "Next", botones de "Yes/No", las variables de cantidades que incluyen points y el mensaje de agradecimiento al final de cada experimento. Imagino que estará en alguna libreria. Por favor, si se corrige el botón "Next" modifique global/Introduccition para quitar la frase "Por favor, pulse "Next" para avanzar".
+* **Survey**: no sé cómo programar la lista de países en castellano.
+* **Dilema del prisionero**: en la fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
+* **Juego Agente-Principal**: es muy complicado el juego para que si quiera puedan saber que están haciendo los participantes. Hay que explicarlo mejor.
+* **Matching Pennies**: ResultsWaitPage y puntos en resultados en inglés.
+* **Traveler Dilemmma**: ResultsWaitPage y puntos en resultados en inglés.
+* **Barganing Game**: ResultsWaitPage y puntos en resultados en inglés.
+
 
 ## Instalar oTree original: Guía rápida
 
