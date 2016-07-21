@@ -29,9 +29,11 @@ juegos quedaran más claras.
 * **Survey**: no sé cómo programar la lista de países en castellano.
 * **Dilema del prisionero**: en la fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
 * **Juego Agente-Principal**: es muy complicado el juego para que si quiera puedan saber que están haciendo los participantes. Hay que explicarlo mejor.
-* **Matching Pennies**: ResultsWaitPage y puntos en resultados en inglés.
-* **Traveler Dilemmma**: ResultsWaitPage y puntos en resultados en inglés.
-* **Barganing Game**: ResultsWaitPage y puntos en resultados en inglés.
+* **Matching Pennies**: puntos en resultados en inglés.
+* **Traveler Dilemmma**: puntos en resultados en inglés.
+* **Barganing Game**: puntos en resultados en inglés.
+* **Common_value_auction**: puntos de apuesta en inglés.
+* **Stackelberg_competition**: botón de puntos.
 
 
 ## Instalar oTree original: Guía rápida
