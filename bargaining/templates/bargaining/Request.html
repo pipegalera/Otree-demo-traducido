@@ -2,14 +2,14 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Request
+    Demanda de la parte total
 {% endblock %}
 
 {% block content %}
 
-    <p>How many points will you demand for yourself?</p>
+    <p>¿Cuántos puntos demanda para rusted?</p>
 
-    {% formfield player.request_amount with label="Please enter a number from 0 to 100" %}
+    {% formfield player.request_amount with label="Por favor, introduzca una cantidad de 0 a 100" %}
 
     <p>{% next_button %}</p>
     {% include instructions %}

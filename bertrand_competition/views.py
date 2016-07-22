@@ -24,8 +24,8 @@ class Question1(Page):
     template_name = 'global/Question.html'
     form_model = models.Player
     form_fields = ['training_my_profit']
-    question = '''Suppose that you set your price at 40 points and the other\
-        firm at 50 points. What would be your profit?'''
+    question = '''Suponga que decide que el precio de su producto es 40 puntos y la otra\
+        empresa 50 puntos, ¿Qué beneficio tendrías?'''
 
     def is_displayed(self):
         return self.subsession.round_number == 1
@@ -45,11 +45,11 @@ class Feedback1(Page):
         return {
             'answer': [p.training_my_profit, 40],
             'explanation': mark_safe(Question1.question + '''
-                <strong>Solution: 40 points</strong>
-                <strong>Explanation:</strong> Since your price was lower than\
-                that of the other firm, the buyer bought from you. Hence your\
-                profit would be your price, which was <strong>40\
-                points</strong>.''')
+                <strong>Solución:</strong> 40 puntos
+                <strong>Explicación:</strong> Como su precio era inferior\
+                al precio de la otra empresa, el comprador a comprado su producto. Por lo que su\
+                beneficio será el precio, que era <strong>40\
+                puntos</strong>.''')
         }
 
 
@@ -61,6 +61,9 @@ class Decide(Page):
 
 class ResultsWaitPage(WaitPage):
 
+    body_text = "Esperando al otro participante."
+
+
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
@@ -70,15 +73,15 @@ class Results(Page):
     def vars_for_template(self):
         return {
             'table': [
-                ('', 'Points'),
-                ('Your price', self.player.price),
-                ('Lowest price', min(
+                ('', 'Puntos'),
+                ('Su precio', self.player.price),
+                ('Precio más bajo', min(
                     p.price for p in self.group.get_players())),
-                ('Was your product sold?',
-                    'Yes' if self.player.is_a_winner else 'No'),
-                ('Your profit', self.player.payoff - Constants.bonus),
-                ('In addition you get a participation fee of', Constants.bonus),
-                ('So in sum you will get', self.player.payoff),
+                ('¿Su producto fue vendido?',
+                    'Sí' if self.player.is_a_winner else 'No'),
+                ('Su beneficio', self.player.payoff - Constants.bonus),
+                ('Además, tiene una compensación por participar de', Constants.bonus),
+                ('Con todo, sus beneficios finales son de', self.player.payoff),
             ]
         }
 

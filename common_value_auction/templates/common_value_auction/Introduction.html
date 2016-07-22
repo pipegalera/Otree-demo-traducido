@@ -2,31 +2,31 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Introduction
+    Introducción
 {% endblock %}
 
 {% block content %}
 
     <p>
-        You have been randomly and anonymously grouped with other players.
-        All players see these same instructions.
+        Ha sido emparejado al azar con otros jugador de forma anónima. Todos los jugadores tienen las mismas instrucciones
     </p>
 
     <p>
-        Your task will be to bid for an item that is being auctioned.
-        Prior to bidding, each player will be given an estimate of the actual value of the item. The estimates may be different between players.
-        The actual value of the item, which is common to all players, will be revealed after the bidding has taken place.
+        El juego consiste en apostar en una subasta por un objeto.El valor subjetivo de un objeto es diferente para cada participante y privado.
+        Antes de apostar todos los jugadores verán el valor real del objeto, igual para todos los jugadores, y después se procederá
+        a la subasta del objeto.
     </p>
 
     <p>
-        Based on the value estimate, each player will submit a single bid within a given range.
-        All bids are private and submitted at the same time.
+        Basandote en el valor estimado, cada jugador declarará una sola apuesta dentro de un rango. Todas las apuestas son simultáneas
+        y anónimas.
     </p>
 
     <p>
-        The highest bidder will receive the actual value of the item as payoff minus their own bid amount.
-        If the winner's bid amount is higher than the actual value of the item, the payoff will be zero.
-        In the event of a tie between two or more players, the winner will be chosen at random. Other players will receive nothing.
+        El postor que pague una mayor cantidad recibirá el valor actual del objeto <strong>menos su propia apuesta</strong>.
+        Si el ganador apuesta una cantidad por encima del precio real del objeto, su beneficio será 0.
+        En caso de que la apuesta empate con la de otros jugadores, el ganador será elegido al azar entre los empatados.
+        Si no gana la subasta, el pago final o beneficio es 0.
     </p>
 
     {% next_button %}

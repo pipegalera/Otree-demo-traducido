@@ -2,18 +2,18 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-Results
+Resultados
 {% endblock %}
 
 {% block content %}
 <p>
 
 {% if player.id_in_group == 1 %}
-You decided to keep <strong>{{group.kept}}</strong> for yourself.
+Ha decidido quedarse con <strong>{{group.kept}}</strong>.
 {% else %}
-Participant 1 decided to keep <strong>{{group.kept}}</strong>, so you got <strong>{{offer}}</strong>.
+El Participante 1 ha decidido quedarse con <strong>{{group.kept}}</strong>, por lo que usted obtiene <strong>{{offer}}</strong>.
 {% endif %}
-In addition, you receive 10 points for participation. Thus, your total payoff is <strong>{{player.payoff}}</strong>.
+Además, recibirá 10 puntos por su participación en el experimento. En total, sus beneficios son de <strong>{{player.payoff}}</strong>.
 </p>
 <p>
 {% next_button %}

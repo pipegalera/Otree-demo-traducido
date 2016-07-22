@@ -54,16 +54,16 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
 
-    training_answer_mine = models.CurrencyField(verbose_name='My compensation would be')
-    training_answer_others = models.CurrencyField(verbose_name="The other traveler's compensation would be")
+    training_answer_mine = models.CurrencyField(verbose_name='Mi compensación sería de')
+    training_answer_others = models.CurrencyField(verbose_name="La compensación del otro viajero sería de")
 
     # claim by player
     claim = models.CurrencyField(
         min=Constants.min_amount, max=Constants.max_amount,
         doc="""
-        Each player's claim
+        Cada viajero declara
         """,
-        verbose_name='Please enter a number from 2 to 100'
+        verbose_name='Por favor, introduzca una cantidad de 0 a 100'
     )
 
     def other_player(self):

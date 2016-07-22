@@ -2,28 +2,28 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Results for Round {{ round_number }} of {{ total_rounds }}
+    Resultados de la Ronda {{ round_number }} de {{ total_rounds }}
 {% endblock %}
 
 {% block content %}
 
     <p>
-        {% if role == 'Player 1' %}
-            You were Player 1. You chose "{{ player.penny_side }}", Player 2 guessed "{{ player.other_player.penny_side }}".
+        {% if role == 'Jugador 1' %}
+            Como Jugador 1, eligió <strong>{{ player.penny_side }}"</strong>, y el Jugador 2 imagino que elegiría <strong>"{{ player.other_player.penny_side }}"</strong>.
         {% else %}
-            You were Player 2. You guessed "{{  player.penny_side }}", Player 1 chose "{{ player.other_player.penny_side }}".
+            Como Jugador 2, intentó adivinar que el Jugador 1 elegiría <strong>"{{  player.penny_side }}"</strong>, y elegió <strong>"{{ player.other_player.penny_side }}"</strong>.
         {% endif%}
     </p>
 
     <p>
-        In this round, you win {{ player.payoff }} and your opponent wins {{ player.other_player.payoff }}.
+        En esta ronda ha ganado <strong>{{ player.payoff }}</strong> y su oponente <strong>{{ player.other_player.payoff }}</strong>.
     </p>
 
     <p>
         {% if round_number < total_rounds %}
-            Please click "Next" to proceed to the next round where you will play against the same opponent but your roles will be switched.
+            En la siguiente ronda <strong>cambiará</strong> su rol de Jugador con su oponente. Por favor, pulse "Next" para pasar a la siguiente ronda.
         {% else %}
-            All rounds are now finished.
+            Las rondas han terminado.
         {% endif %}
     </p>
 

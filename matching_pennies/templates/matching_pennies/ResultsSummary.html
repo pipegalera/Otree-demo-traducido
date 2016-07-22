@@ -2,36 +2,36 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Results for Rounds 1–{{ total_rounds }}
+    Resultado de las Rondas 1–{{ total_rounds }}
 {% endblock %}
 
 {% block content %}
 
     <p>
-        This is a summary of the rounds played.
+        En la tabla se muestra un resumen de las rondas.
     </p>
 
     <table class="table" style="width:400px; margin-top:20px;">
         <tr>
-            <th>Round</th>
-            <th>Player and outcome</th>
-            <th>Points</th>
+            <th>Ronda</th>
+            <th>Jugador y Resultados</th>
+            <th>Puntos</th>
         </tr>
         {% for p in player_in_all_rounds %}
             <tr>
                 <td>{{ p.subsession.round_number }}</td>
-                <td>You were {{ p.role }} and {% if p.is_winner %} won {% else %} lost {% endif %}</td>
+                <td>Usted era el {{ p.role }} y {% if p.is_winner %} ganó {% else %} perdió {% endif %}</td>
                 <td>{{ p.payoff }}</td>
             </tr>
         {% endfor %}
     </table>
 
     <p>
-        You earned {{ total_payoff }}. In addition to that, you get a participation fee of {{ Constants.base_points }}.
+        Ha ganado en las rondas {{ total_payoff }}. Además de esto, se le recompensa su participación en el experimento con {{ Constants.base_points }}.
     </p>
 
     <p>
-        In total, you receive {{ total_plus_base }}.
+        Su beneficio total es de <strong>{{ total_plus_base }}</strong>.
     </p>
 
 

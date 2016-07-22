@@ -49,7 +49,7 @@ class Group(BaseGroup):
     kept = models.CurrencyField(
         doc="""Amount dictator decided to keep for himself""",
         min=0, max=Constants.allocated_amount,
-        verbose_name='I will keep (from 0 to %i)' % Constants.allocated_amount
+        verbose_name='Decido quedarme con (de 0 a %i)' % Constants.allocated_amount
     )
 
     def set_payoffs(self):
@@ -62,7 +62,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     training_participant1_payoff = models.CurrencyField(
-        verbose_name="Participant 1's payoff would be")
+        verbose_name="El beneficio del Participante 1 sería")
     training_participant2_payoff = models.CurrencyField(
-        verbose_name="Participant 2's payoff would be")
+        verbose_name="El beneficio del Participante 1 sería")
 

@@ -59,9 +59,9 @@ class Player(BasePlayer):
         min=0, max=Constants.amount_shared
     )
     training_amount_mine = models.CurrencyField(
-        verbose_name='You would get')
+        verbose_name='Recibiría')
     training_amount_other = models.CurrencyField(
-        verbose_name='The other participant would get')
+        verbose_name='El otro participante recibiría')
 
     def other_player(self):
         """Returns the opponent of the current player"""

@@ -31,8 +31,8 @@ class Feedback(Page):
         return {'num_q': 1,
               #  'answer': self.player.training_question_1,
                # 'correct': Constants.training_1_correct,
-                'explanation': """Total units produced were 20 + 30 = 50. The unit selling price was 60 – 50 = 10.
-                                  The profit for firm B would be the product of the unit selling price and the unit produced by firm B, that is 10 × 30 = 300""",
+                'explanation': """Las unidades total producidas son 20 + 30 = 50. Entonces, el precio de venta por unidad es de 60 - 50 = 10.
+                                  El beneficio que obtendría la empresa B sería la cantidad producida por B por el precio de venta de la unidad: 30 x 10 = 300""",
               #  'is_correct': self.player.is_training_question_1_correct()
               }
 
@@ -54,9 +54,9 @@ class ChoiceTwoWaitPage(WaitPage):
 
     def body_text(self):
         if self.player.id_in_group == 1:
-            return "Waiting for the other participant to decide."
+            return "Esperando a que el otro participante decida."
         else:
-            return 'You are to decide second. Waiting for the other participant to decide first.'
+            return 'Eres la segunda empresa en decidir. Por favor, espere que la primera empresa decida.'
 
 
 class ChoiceTwo(Page):
@@ -75,7 +75,7 @@ class ResultsWaitPage(WaitPage):
 
 
 
-    body_text = "Waiting for the other participant to decide."
+    body_text = "Esperando al resto de participantes."
 
     def after_all_players_arrive(self):
         for p in self.group.get_players():

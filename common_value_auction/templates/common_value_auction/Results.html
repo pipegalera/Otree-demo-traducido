@@ -2,31 +2,31 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Results
+    Resultados
 {% endblock %}
 
 {% block content %}
 
     <p>
         {% if player.is_winner %}
-            You won the auction!
+            ¡Ha ganado la subasta!
             {% if is_greedy %}
-                However, your bid amount was higher than the actual value of the item. Your payoff is therefore zero.
+                Sin embargo, tu cantidad pujada ha sido mayor que el valor real del objeto. De todas formas, no obtendrá péridas y sus beneficios serán 0.
             {% elif player.payoff == 0 %}
-                Your payoff, however, is zero.
+                Sin embargo, tus beneficios son 0.
             {% endif %}
         {% else %}
-            You did not win the auction.
+            Lo siento, no has ganado la subasta.
         {% endif %}
     </p>
 
     <table class="table" style="width:400px">
 
         <tr>
-            <th>Your bid</th>
-            <th>Winning bid</th>
-            <th>Actual value</th>
-            <th>Your payoff</th>
+            <th>Has pujado</th>
+            <th>Puja Ganadora</th>
+            <th>Valor Real</th>
+            <th>Beneficios Obtenidos</th>
         </tr>
 
     <tr>

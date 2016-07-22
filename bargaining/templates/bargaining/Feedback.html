@@ -2,33 +2,33 @@
 {% load otree_tags %}
 
 {% block title %}
-Solution to Understanding Question {{ num_q }} of {{ total_q }}
+Solución a la Pregunta de Entendimiento {{ num_q }} de {{ total_q }}
 {% endblock %}
 
 {% block content %}
 {% ifequal player.training_amount_mine 0 %}
 <p class="text-success">
-Your answer {{player.training_amount_mine}} for yourself was correct.
+{{player.training_amount_mine}} es correcto, no recibiría puntos.
 </p>
 {% else %}
 <p class="text-danger">
-Your answer {{player.training_amount_mine}} for yourself was incorrect.
+{{player.training_amount_mine}} es incorrecto.
 </p>
 {% endifequal %}
 {% ifequal player.training_amount_other 0 %}
 <p class="text-success">
-Your answer {{player.training_amount_other}} for the other participant was correct.
+{{player.training_amount_other}} es correcto, no recibiría puntos.
 </p>
 {% else %}
 <p class="text-danger">
-Your answer {{player.training_amount_other}} for the other participant was incorrect.
+{{player.training_amount_other}} es incorrecto.
 </p>
 {% endifequal %}
 <p>
-Suppose that you demanded 55 points and the other participant demanded 80 points. What would you and the other participant get respectively?
+    Suponga que ha demandado 55 puntos del total, y el otro participante ha demandado 80, ¿Cuál sería el reparto para usted y para el otro participante, respectivamente?
 </p>
-<p><strong>Solution: Both of you would get 0.</strong></p>
-<p><strong>Explanation:</strong> The sum of your demands was 55+80=135, which was larger than 100. Hence both of you would get nothing.
+<p><strong>Solución: ambos recibiríais 0.</strong></p>
+<p><strong>Explicación:</strong> La suma de las demandas es 55+80 = 135, que es mayor que el total de 100. Por lo que ninguno recibiría nada.
 </p>
 <p>
 {% next_button %}

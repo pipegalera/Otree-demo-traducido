@@ -37,8 +37,8 @@ class Feedback1(Page):
     def vars_for_template(self):
         p = self.player
         return {'answers': {
-                'participant 1': [p.training_participant1_payoff, 88],
-                'participant 2': [p.training_participant2_payoff, 12]}}
+                'participante 1': [p.training_participant1_payoff, 88],
+                'participante 2': [p.training_participant2_payoff, 12]}}
 
 
 class Offer(Page):
@@ -57,9 +57,9 @@ class ResultsWaitPage(WaitPage):
 
     def body_text(self):
         if self.player.id_in_group == 2:
-            return "You are participant 2. \
-                Waiting for participant 1 to decide."
-        return 'Please wait'
+            return "Usted es el Participante 2. \
+                Por favor, espere a que el Participante 1 decida."
+        return 'Por favor espere'
 
 
 class Results(Page):

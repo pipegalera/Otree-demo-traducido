@@ -22,6 +22,10 @@ class Bid(Page):
 
 class ResultsWaitPage(WaitPage):
 
+
+
+    body_text = "Esperando al resto de participantes."
+
     def after_all_players_arrive(self):
         self.group.set_winner()
         for p in self.group.get_players():

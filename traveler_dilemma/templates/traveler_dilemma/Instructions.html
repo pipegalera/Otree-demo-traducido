@@ -4,17 +4,25 @@
 {% block instructions %}
 
 <p>
-You have been randomly and anonymously paired with another participant. Now please image the following scenario.
+    Ha sido emparejado al azar con otro participante de forma anónima. Por favor, imagíne el siguiente escenario.
 </p>
 <p>
-You and another traveler (the other participant) just returned from a remote island where both of you bought the same antiques. Unfortunately, you discovered that your airline managed to smash the antiques, as they always do. The airline manager assures you of adequate compensation. Without knowing the true value of your antiques, he offers you the following scheme. Both of you simultaneously and independently make a claim for the value of your own antique (ranging from {{Constants.min_amount}} to {{Constants.max_amount}}):
+    Tú y otro viajero (el otro participante) acabáis de volver de una isla remota donde habéis comprado justamente las mismas antigüedades.
+    Lamentablemente acabas de ver que los responsables del equipaje de la aerolínea se las han arreglado para destrozar todas antigüedades,
+    tanto las tuyas como las de tu compañero. La aerolínea  le asegura que le proporcionará una compensación adecuada por los daños, pero
+    no sabe el verdadero valor de las angtigüedades.
+</p>
+<p>
+    Le propone lo siguiente: como le dijiste a la aerolínea que tanto tu compañero como tú llevabais los mismos objetos os pide a tu compañero
+    y a ti que <strong>valoréis vuestras propias antigüedades</strong> de forma independiente en un rango de {{Constants.min_amount}} a {{Constants.max_amount}}).
 </p>
 <ul>
     <li>
-    If both claim the same amount, then this amount will be paid to both.
+        Si los dos declaráis la <strong>misma cantidad</strong>, entonces la areolínea os <strong>pagará a cada uno esa cantidad</strong>.
     </li>
     <li>
-    If you claim different amounts, then the lower amount will be paid to both. Additionally, the one with lower claim will receive a reward of {{Constants.penalty}}; the one with higher claim will receive a penalty of {{Constants.reward}}.
+        Si declaráis <strong>diferentes cantidades</strong>, entonces la aerolínea os pagará una cantidad inferior. Además, <strong>el que haya declarado menor cantidad
+        recibirá una <strong>recompensa</strong> de {{Constants.reward}} y el que haya declarado una mayor cantidad recibirá una <strong>penalización</strong> de {{Constants.penalty}}.
     </li>
 </ul>
 {% endblock %}

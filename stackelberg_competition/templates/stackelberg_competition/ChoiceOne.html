@@ -2,16 +2,16 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Production
+    Producción
 {% endblock %}
 
 {% block content %}
 
     <p>
-        You are to decide first. How many units will you produce?
+        Eres la primera empresa en decidir, ¿Cuántas unidades va a producir?
     </p>
 
-    {% formfield player.quantity with label='Number of units:' %}
+    {% formfield player.quantity with label='Número de unidades:' %}
 
     {% next_button %}
 

@@ -140,22 +140,10 @@ SESSION_CONFIGS = [
         'app_sequence': ['public_goods', 'payment_info'],
     },
     {
-        'name': 'public_goods_simple',
-        'display_name': "Public Goods (simple version from tutorial)",
-        'num_demo_participants': 3,
-        'app_sequence': ['public_goods_simple', 'survey', 'payment_info'],
-    },
-    {
         'name': 'trust',
         'display_name': "Juego de Confianza",
         'num_demo_participants': 2,
         'app_sequence': ['trust', 'payment_info'],
-    },
-    {
-        'name': 'trust_simple',
-        'display_name': "Trust Game (simple version from tutorial)",
-        'num_demo_participants': 2,
-        'app_sequence': ['trust_simple'],
     },
     {
         'name': 'beauty',
@@ -232,47 +220,39 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'dictator',
-        'display_name': "Dictator Game",
+        'display_name': "Juego del Dictador",
         'num_demo_participants': 2,
         'app_sequence': ['dictator', 'payment_info'],
     },
     {
         'name': 'matching_pennies',
-        'display_name': "Matching Pennies",
+        'display_name': "Juego de Monedas (Matching Pennies)",
         'num_demo_participants': 2,
         'app_sequence': [
             'matching_pennies', 'payment_info'
         ],
     },
     {
-        'name': 'matching_pennies_tutorial',
-        'display_name': "Matching Pennies (tutorial version)",
-        'num_demo_participants': 2,
-        'app_sequence': [
-            'matching_pennies_tutorial',
-        ],
-    },
-    {
         'name': 'traveler_dilemma',
-        'display_name': "Traveler's Dilemma",
+        'display_name': "Dilema del Viajero",
         'num_demo_participants': 2,
         'app_sequence': ['traveler_dilemma', 'payment_info'],
     },
     {
         'name': 'bargaining',
-        'display_name': "Bargaining Game",
+        'display_name': "Juego de Negociación",
         'num_demo_participants': 2,
         'app_sequence': ['bargaining', 'payment_info'],
     },
     {
         'name': 'common_value_auction',
-        'display_name': "Common Value Auction",
+        'display_name': "Subasta de Valor Común",
         'num_demo_participants': 3,
         'app_sequence': ['common_value_auction', 'payment_info'],
     },
     {
         'name': 'stackelberg_competition',
-        'display_name': "Stackelberg Competition",
+        'display_name': "Competición Stakelberg",
         'real_world_currency_per_point': 0.01,
         'num_demo_participants': 2,
         'app_sequence': [
@@ -281,7 +261,7 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'bertrand_competition',
-        'display_name': "Bertrand Competition",
+        'display_name': "Competición Bertrand",
         'num_demo_participants': 2,
         'app_sequence': [
             'bertrand_competition', 'payment_info'
@@ -289,13 +269,13 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'stag_hunt',
-        'display_name': "Stag Hunt",
+        'display_name': "Juego de Ciervo-Liebre (Stag Hunt)",
         'num_demo_participants': 2,
         'app_sequence': ['stag_hunt', 'payment_info'],
     },
     {
         'name': 'real_effort',
-        'display_name': "Real-effort transcription task",
+        'display_name': "Tarea de esfuerzo real (transcripción)",
         'num_demo_participants': 1,
         'app_sequence': [
             'real_effort',
@@ -303,7 +283,7 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'lemon_market',
-        'display_name': "Lemon Market Game",
+        'display_name': "Mercado de cacharros (lemon Market)",
         'num_demo_participants': 3,
         'app_sequence': [
             'lemon_market', 'payment_info'

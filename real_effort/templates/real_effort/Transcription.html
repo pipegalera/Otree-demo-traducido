@@ -2,7 +2,7 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Transcription task {{ number }}/{{ paragraph_count }}
+    Tarea de Transcripción {{ number }}/{{ paragraph_count }}
 {% endblock %}
 
 {% block content %}
@@ -11,8 +11,8 @@
 
 
     <p>
-        Please transcribe (that is copy) the text below into the input field. Be exact and make
-        sure to get all characters and spaces correct.
+        Por favor, transcribe (copia) el texto que se muestra en la imagen. Tiene que ser exactamente el mismo texto,
+        asegúrese de que introduce todos los carácteres y espacios.
     </p>
 
     <div>
@@ -37,22 +37,22 @@
     });
     </script>
     <p>
-        By the way we have magic <a href="#" id="prefill">link</a> for you.
+        Por cierto, aquí tiene un pequeño <a href="#" id="prefill">atajo</a>.
     </p>
     {% endif %}
 
     {% next_button %}
     {% if settings.DEBUG %}
     <div class="box papereffect">
-        <h4>Explanation for researchers (shown in debug mode only)</h4>
+        <h4>Explicación para investigadores (Sólo se ve en modo debug)</h4>
         <p>
         {% if error_rate_percent != 0 %}
-        The text has {{ transcription | length }} characters including space.
-        A subject can only advance to the next screen if the Levenshtein distance
-        is less than {{ error_rate_percent }}% of the total characters.
+        El texto tiene {{ transcription | length }} carácteres incluyendo los espacios.
+        El sujeto solo puede avanzar a la pantalla siguiente si la distancia de Levenshtein
+        es menor de {{ error_rate_percent }}% del total de los carácteres.
         {% else %}
-        This text is rather short ({{ transcription | length }} characters including space).
-        A subject can only advance to the next screen if he makes no mistakes.
+        Este texto es más bien corto({{ transcription | length }} carácteres incluyendo los espacios).
+        el sujeto solo puede avanzar a la pantalla siguiente si introduce todos los carácteres corredctamente.
         {% endif %}
         </p>
     </div>

@@ -25,7 +25,7 @@ class Question1(Page):
     template_name = 'global/Question.html'
     form_model = models.Player
     form_fields = ['training_answer_mine', 'training_answer_others']
-    question = '''Suppose that you claim the antiques are worth 50 points and the other traveler claims they are worth 100 points. What would you and the other traveler receive in compensation from the airline?'''
+    question = '''Suponga que declara que las antigüedades valían 50 puntos mientras que el otro viajero declara que valían 100, ¿Qué compensación recibiríais, respectivamente?'''
 
     def is_displayed(self):
         return self.subsession.round_number == 1
@@ -53,6 +53,8 @@ class Claim(Page):
 class ResultsWaitPage(WaitPage):
 
 
+
+    body_text = "Esperando al resto de participantes."
 
     def after_all_players_arrive(self):
         for p in self.group.get_players():

@@ -23,9 +23,9 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     # error in case participant is not allowed to make any errors
-    transcription_error_0 = "The transcription should be exactly the same as on the image."
+    transcription_error_0 = "¡Tiene que introducir exactamente el texto que ve en el cuadro!"
     # error in case participant is allowed to make some errors, but not too many
-    transcription_error_positive = "This transcription appears to contain too many errors."
+    transcription_error_positive = "Esta transcripción tiene demasiados errores"
 
     error_rate_transcription_1 = 0.0
     error_rate_transcription_2 = 0.3

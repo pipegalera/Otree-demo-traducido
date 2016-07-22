@@ -1,12 +1,12 @@
 {% extends "global/Question.html" %}
 
 {% block question %}
-<p>You are buyer.</p>
+<p>Eres el comprador.</p>
 <p>
-<strong>Below are the listed prices from the sellers:</strong><br />
+<strong>Aquí tiene la lista de precios de los 2 vendedores:</strong><br />
 {% for player in group.get_players %}
-{% if 'seller' in player.role %}
-<i>Price from {{player.role|capfirst}}: {{player.price}}</i><br />
+{% if 'vendedor' in player.role %}
+<i>Precio por {{player.role|capfirst}}: {{player.price}}</i><br />
 {% endif %}
 {% endfor %}
 </p>

@@ -30,8 +30,7 @@ class Question1(Page):
         return self.subsession.round_number == 1
 
     def vars_for_template(self):
-        return {'num_q': 1, 'question': '''Suppose that you demanded 55 points and the other participant demanded 80 points.
-            What would you and the other participant get respectively?'''}
+        return {'num_q': 1, 'question': '''Suponga que ha demandado 55 puntos del total, y el otro participante ha demandado 80, ¿Cuál sería el reparto para usted y para el otro participante, respectivamente?'''}
 
 
 class Feedback(Page):
@@ -57,6 +56,10 @@ class Request(Page):
 
 
 class ResultsWaitPage(WaitPage):
+
+
+
+    body_text = "Esperando al resto de participantes."
 
     def after_all_players_arrive(self):
         self.group.set_payoffs()

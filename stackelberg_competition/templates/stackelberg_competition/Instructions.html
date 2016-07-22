@@ -13,44 +13,44 @@
 <div class="well well-lg" style="padding-top:5px; padding-bottom:15px; margin-top:20px;">
 
     <h3 class="panel-sub-heading">
-        Instructions
+        Instrucciones
     </h3>
 
     <p>
-        You have been randomly and anonymously paired with another participant.
-        Each of you will represent a firm. Both firms manufacture the same product.
+        En este estudio vas a ser emparejado al azar con otro participante de forma anónima. Cada participante representa una empresa,
+        y cada empresa produce el mismo producto sin ningún coste.
     </p>
 
     <p>
-        The two of you decide sequentially how many units to manufacture.
-        One of you will decide first. The other will be informed of the units produced by the first one and then decide the units for herself/himself.
-        You will learn the order prior to making any decision.
+        Los dos participantes tendréis que elegir secuencialmente cuantas unidades queréis producir. Es decir, un primer participante decide
+        cuánto quiere producir. Después, el otro participante es informado de la cantidad que produce el primero y elige la cantidad que quiere
+        producir él. Antes de tomar cualquier decisión se informará si tu rol es la primera empresa o la empresa que decide cantidades después.
     </p>
 
     <p>
-        Your choices can be any number from 0 to {{ Constants.max_units_per_player }}.
-        All produced units will be sold, but the more is produced, the lower the unit selling price will be.
+        La cantidad que elija producir cada empresa puede ir de 0 a {{ Constants.max_units_per_player }}.
+        Todas las unidades que se produzcan son vendidas, pero tenga en cuenta que cuantas más unidades se producen menor es su precio de venta.
     </p>
 
 
     <p>
-        The unit selling price is:
-    </p>
-
-    <ul>
-        <strong>Unit selling price = {{ Constants.total_capacity }} – Units produced by your firm – Units produced by the other firm</strong>
-    </ul>
-
-    <p>
-        Your profit, also measured in points, is therefore:
+        El precio de venta por unidad es:
     </p>
 
     <ul>
-        <strong>Your profit = Unit selling price × Units produced by your firm</strong>
+        <strong>Precio de venta por unidad = {{ Constants.total_capacity }} – "Unidades que produce su propia empresa" – "Unidades que produce la otra empresa"</strong>
     </ul>
 
     <p>
-       For your convenience, these instructions will remain available to you on all subsequent screens of this study.
+        Los beneficios que obtienen las empresas, medidos en puntos, son:
+    </p>
+
+    <ul>
+        <strong>Beneficios = "Candidad producida por tu empresa" × "Precio de venta de la unidad"</strong>
+    </ul>
+
+    <p>
+        Para su comodidad, estas instrucciones permaneceran visibles duran todo el experimento.
     </p>
 
 </div>

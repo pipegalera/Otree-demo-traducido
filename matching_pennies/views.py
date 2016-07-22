@@ -59,7 +59,7 @@ class ResultsWaitPage(WaitPage):
     def after_all_players_arrive(self):
         self.group.set_payoffs()
 
-    body_text = "Waiting for your opponent."
+    body_text = "Esperando a su oponente."
 
 
 class Results(Page):

@@ -60,7 +60,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     training_my_profit = models.CurrencyField(
-        verbose_name='My profit would be')
+        verbose_name='Mi beneficio sería de')
 
     price = models.CurrencyField(
         min=0, max=Constants.maximum_price,

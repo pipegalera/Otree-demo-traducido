@@ -26,9 +26,9 @@ class Constants(BaseConstants):
     players_per_group = 2
     num_rounds = 3
     base_points = c(50)
-    training_1_correct = 'Player 1 gets 100 points, Player 2 gets 0 points'
-    feedback1_explanation = 'Player 1 gets 100 points, Player 2 gets 0 points'
-    training_question_1 = 'Suppose Player 1 picked "Heads" and Player 2 guessed "Tails". Which of the following will be the result of that round?'
+    training_1_correct = 'El Jugador 1 obtiene 100 puntos, el Jugador 2 obtiene 0 puntos'
+    feedback1_explanation = 'El Jugador 1 obtiene 100 puntos, el Jugador 2 obtiene 0 puntos'
+    training_question_1 = 'Suponga que el Jugador 1 ha elegido "Cara" y el Jugador 2 ha imaginado "Cruz", ¿Cuál es el beneficio los jugadores 1 y 2, respectivamente?'
 
 class Subsession(BaseSubsession):
 
@@ -43,8 +43,8 @@ class Group(BaseGroup):
 
 
     def set_payoffs(self):
-        p1 = self.get_player_by_role('Player 1')
-        p2 = self.get_player_by_role('Player 2')
+        p1 = self.get_player_by_role('Jugador 1')
+        p2 = self.get_player_by_role('Jugador 2')
 
         if p2.penny_side == p1.penny_side:
             p2.payoff = 100
@@ -61,17 +61,17 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     training_question_1 = models.CharField(max_length=100,
-                                           choices=['Player 1 gets 0 points, Player 2 gets 0 points',
-                                                    'Player 1 gets 100 points, Player 2 gets 100 points',
-                                                    'Player 1 gets 100 points, Player 2 gets 0 points',
-                                                    'Player 1 gets 0 points, Player 2 gets 100 points'],
+                                           choices=['El Jugador 1 obtiene 0 puntos, el Jugador 2 obtiene 0 puntos',
+                                                    'El Jugador 1 obtiene 100 puntos, el Jugador 2 obtiene 100 puntos',
+                                                    'El Jugador 1 obtiene 100 puntos, el Jugador 2 obtiene 0 puntos',
+                                                    'El Jugador 1 obtiene 0 puntos, el Jugador 2 obtiene 100 puntos'],
                                            widget=widgets.RadioSelect())
 
     def is_training_question_1_correct(self):
         return self.training_question_1 == Constants.training_1_correct
 
     penny_side = models.CharField(
-        choices=['Heads', 'Tails'],
+        choices=['Cara', 'Cruz'],
         doc="""Heads or tails""",
         widget=widgets.RadioSelect()
     )
@@ -86,7 +86,7 @@ class Player(BasePlayer):
 
     def role(self):
         if self.id_in_group == 1:
-            return 'Player 1'
+            return 'Jugador 1'
         if self.id_in_group == 2:
-            return 'Player 2'
+            return 'Jugador 2'
 

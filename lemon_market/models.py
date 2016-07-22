@@ -49,7 +49,7 @@ class Group(BaseGroup):
             seller.payoff += seller.price - seller.quality
 
     def seller(self):
-        choice = self.get_player_by_role('buyer').choice
+        choice = self.get_player_by_role('comprador').choice
         if choice:
             return self.get_player_by_id(choice + 1)
 
@@ -58,36 +58,36 @@ class Player(BasePlayer):
 
     # training
     training_buyer_earnings = models.CurrencyField(
-        verbose_name="Buyer's period payoff would be")
+        verbose_name="Los beneficios del comprador en este periodo serían de")
 
     training_seller1_earnings = models.CurrencyField(
-        verbose_name="Seller 1's period payoff would be")
+        verbose_name="Los beneficios del Vendedor 1 en este periodo serían de")
 
     training_seller2_earnings = models.CurrencyField(
-        verbose_name="Seller 2's period payoff would be")
+        verbose_name="Los beneficios del Vendedor 2 en este periodo serían de")
 
     # seller
     price = models.CurrencyField(
         min=0, max=Constants.INITIAL,
-        verbose_name='Please indicate a price (from 0 to %i) you want to sell'
+        verbose_name='Por favor, introduce la cantidad que quiera vender (de 0 a %i)'
         % Constants.INITIAL)
 
     quality = models.CurrencyField(choices=[
-        (30, 'High'),
-        (20, 'Medium'),
-        (10, 'Low')],
-        verbose_name='Please select a quality grade you want to produce',
+        (30, 'Alto'),
+        (20, 'Medio'),
+        (10, 'Bajo')],
+        verbose_name='Por favor, seleccione la calidad del producto que va a producir',
         widget=widgets.RadioSelectHorizontal())
 
     # buyer
     choice = models.PositiveIntegerField(
-        choices=[(i, 'Buy from seller %i' % i) for i in
-                 range(1, Constants.players_per_group)] + [(0, 'Buy nothing')],
+        choices=[(i, 'Comprar del vendedor %i' % i) for i in
+                 range(1, Constants.players_per_group)] + [(0, 'No comprar')],
         blank=True,
         widget=widgets.RadioSelect(),
-        verbose_name='And you will')  # seller index
+        verbose_name='y va a')  # seller index
 
     def role(self):
         if self.id_in_group == 1:
-            return 'buyer'
-        return 'seller %i' % (self.id_in_group - 1)
+            return 'comprador'
+        return 'vendedor %i' % (self.id_in_group - 1)

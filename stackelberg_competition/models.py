@@ -30,7 +30,7 @@ class Constants(BaseConstants):
     fixed_pay = c(50)
     training_1_correct = c(300)
 
-    training_question_1 = "Suppose firm A first decided to produce 20 units. Then firm B would be informed of firm A's production and decided to produce 30 units. What would be the profit for firm B?"
+    training_question_1 = "Suponga que una empresa A decide producir 20 unidades. La empresa B, observa la producción de la empresa A y, decide producir 30 unidades, ¿Cuál es el beneficio de la empresa B?"
 
 class Subsession(BaseSubsession):
 

@@ -2,37 +2,41 @@
 {% load otree_tags %}
 
 {% block title %}
-Solution to Understanding Question {{ num_q }} of {{ total_q }}
+Solución a la Pregunta de Entendimiento {{ num_q }} de {{ total_q }}
 {% endblock %}
 
 
 {% block content %}
 {% if player.training_answer_mine == 52 %}
 <p class="text-success">
-Your answer {{player.training_answer_mine}} for your compensation was correct.
+ {{player.training_answer_mine}} es correcto, sería exáctamente la compensación que recibirías.
 </p>
 {% else %}
 <p class="text-danger">
-Your answer {{player.training_answer_mine}} for your compensation was incorrect.
+{{player.training_answer_mine}} es incorrecto.
 </p>
 {% endif %}
 {% if player.training_answer_others == 48 %}
 <p class="text-success">
-Your answer {{player.training_answer_others}} for the other traveler's compensation was correct.
+Tu respuesta sobre la compensación del otro viajero, {{player.training_answer_others}}, es correcta.
 </p>
 {% else %}
 <p class="text-danger">
-Your answer {{player.training_answer_others}} for the other traveler's compensation was incorrect.
+Tu respuesta sobre la compensación del otro viajero, {{player.training_answer_others}}, es incorrecta.
 </p>
 {% endif %}
 <p>
-Suppose that you claim the antiques are worth 50 points and the other traveler claims they are worth 100 points. What would you and the other traveler receive in compensation from the airline?
+    Suponga que declara que las antigüedades valían 50 puntos mientras que el otro viajero declara que valían 100,
+    ¿Qué compensación recibiríais, respectivamente?
 </p>
 <p>
-<strong>Solution</strong>: You would receive <strong>52 points</strong> and the other traveler <strong>48 points</strong>.
+<strong>Solución</strong>: Usted recibiría <strong>52 puntos</strong> y el otro viajero <strong>48 puntos</strong>.
 </p>
 <p>
-<strong>Explanation</strong>: You and the other traveler made different claims and yours was lower. Hence your claim, equal to 50, was paid to both of you. In addition, you received a reward of 2 and in total got 50+2=52 points. The other traveler received a penalty of 2 and in total got 50-2=48 points.
+<strong>Explicación</strong>: Ha declarado un valor de las antigüedades diferente al de su compañero de viaje, siendo su
+    declaración más baja. Por ello, ambos reciben esta misma cantidad, 50, pero usted recibe una compensación de 2 puntos por
+    declarar el valor más bajo y su compañero 2 puntos de sanción por declarar un valor más alto. Entonces usted obtiene
+    50 + 2 = 52 puntos y el otro viajero 50 - 2 = 48 puntos.
 </p>
 <p>
 {% next_button %}

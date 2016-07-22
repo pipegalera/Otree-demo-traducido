@@ -1,42 +1,42 @@
 {% extends "global/Base.html" %}
 {% load otree_tags %}
-{% block title %}Results{% endblock %}
+{% block title %}Resultados{% endblock %}
 {% block content %}
 <table class=table style='width: auto'>
     <tr>
         <th></th>
-        <th>Points</th>
+        <th>Puntos</th>
     </tr>
     <tr>
-        <td>You claimed</td>
+        <td>Ha declarado</td>
         <td>{{ player.claim }}</td>
     </tr>
     <tr>
-        <td>The other traveler claimed</td>
+        <td>El otro participante ha declarado</td>
         <td>{{ player.other_player.claim }}</td>
     </tr>
     <tr>
-        <td>Amount paid to both</td>
+        <td>Puntos pagados a ambos</td>
         <td>{{ amount_paid_to_both }}</td>
     </tr>
     <tr>
-        <td>Your reward</td>
+        <td>Su recompensa</td>
         <td>{{ reward }}</td>
     </tr>
     <tr>
-        <td>Your penalty</td>
+        <td>Su sanción</td>
         <td>{{ penalty }}</td>
     </tr>
     <tr>
-        <td>Thus you receive</td>
+        <td>Su pago final</td>
         <td>{{ payoff_before_bonus }}</td>
     </tr>
     <tr>
-        <td>In addition you get a participation fee of</td>
+        <td>Además, obtiene un plus por participar en el experimiento de</td>
         <td>{{ Constants.bonus }}</td>
     </tr>
     <tr>
-        <td>So in sum you will get</td>
+        <td>Sus beneficios finales son</td>
         <td>{{ player.payoff }}</td>
     </tr>
 

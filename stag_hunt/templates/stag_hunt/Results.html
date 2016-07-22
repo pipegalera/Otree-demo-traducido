@@ -2,18 +2,16 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Results
+    Resultados
 {% endblock %}
 
 {% block content %}
 
 
     <p>
-        You went for a <strong>{{ player.decision|lower }}</strong> and the other
-        participant went for a <strong>{{ player.other_player.decision|lower }}</strong>.
-        As a result, your payoff is <strong>{{ player.payoff }}</strong>.
-        In addition, you received 10 points for participation. Thus, your
-        total payoff is <strong>{{ total_payoff }}</strong>.
+        Usted ha decidido cazar <strong>{{ player.decision|lower }}</strong> y el otro participante ha decidido cazar <strong>{{ player.other_player.decision|lower }}</strong>.
+        Como resultado, su beneficios es de <strong>{{ player.payoff }}</strong>. Además, recibirás 10 puntos por su participación. Por lo que sus beneficios totales son
+        <strong>{{ total_payoff }}</strong>.
     </p>
 
     {% next_button %}

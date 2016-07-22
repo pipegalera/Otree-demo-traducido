@@ -41,9 +41,9 @@ class Feedback1(Page):
     def vars_for_template(self):
         p = self.player
         return {'answers': {
-                'buyer': [p.training_buyer_earnings, 45],
-                'seller 1': [p.training_seller1_earnings, 60],
-                'seller 2': [p.training_seller2_earnings, 50]}}
+                'comprador': [p.training_buyer_earnings, 45],
+                'Vendedor 1': [p.training_seller1_earnings, 60],
+                'Vendedor 2': [p.training_seller2_earnings, 50]}}
 
 
 class Production(Page):
@@ -58,10 +58,10 @@ class Production(Page):
 
     def vars_for_template(self):
         return {
-            'title': 'Production (Period %i of %i)' % (
+            'title': 'Producción (Periodo %i de %i)' % (
                 self.subsession.round_number,
                 Constants.num_rounds),
-            'question': 'You are %s.' % self.player.role()}
+            'question': 'Usted es %s.' % self.player.role()}
 
 class SimpleWaitPage(WaitPage):
     pass
@@ -72,12 +72,12 @@ class Purchase(Page):
     form_fields = ['choice']
 
     def is_displayed(self):
-        return self.player.role() == 'buyer'
+        return self.player.role() == 'comprador'
 
 
     def vars_for_template(self):
         return {
-            'title': 'Purchase (Period %i of %i)' % (self.subsession.round_number, Constants.num_rounds)
+            'title': 'Compra (Periodo %i de %i)' % (self.subsession.round_number, Constants.num_rounds)
             }
 
 class ResultsWaitPage(WaitPage):
@@ -94,11 +94,11 @@ class ResultsWaitPage(WaitPage):
 class Results(Page):
 
     def vars_for_template(self):
-        buyer = self.group.get_player_by_role('buyer')
+        buyer = self.group.get_player_by_role('comprador')
 
         return {
-            'buyer': buyer,
-            'seller': buyer.choice and self.group.get_player_by_id(
+            'comprador': buyer,
+            'vendedor': buyer.choice and self.group.get_player_by_id(
                 buyer.choice + 1)
                 }
 

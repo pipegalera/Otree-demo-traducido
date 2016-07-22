@@ -66,7 +66,7 @@ class Player(BasePlayer):
     training_question_1_other_payoff = models.CurrencyField(min=0, max=Constants.training_1_maximun_offered_points)
 
     decision = models.CharField(
-        choices=['Stag', 'Hare'],
+        choices=['Ciervo', 'Liebre'],
         doc="""The player's choice""",
         widget=widgets.RadioSelect()
     )
@@ -86,13 +86,13 @@ class Player(BasePlayer):
     def set_payoff(self):
 
         payoff_matrix = {
-            'Stag': {
-                'Stag': Constants.stag_stag_amount,
-                'Hare': Constants.stag_hare_amount,
+            'Ciervo': {
+                'Ciervo': Constants.stag_stag_amount,
+                'Liebre': Constants.stag_hare_amount,
             },
-            'Hare': {
-                'Stag': Constants.hare_stag_amount,
-                'Hare': Constants.hare_hare_amount,
+            'Liebre': {
+                'Ciervo': Constants.hare_stag_amount,
+                'Liebre': Constants.hare_hare_amount,
             }
         }
         self.payoff = payoff_matrix[self.decision][self.other_player().decision]

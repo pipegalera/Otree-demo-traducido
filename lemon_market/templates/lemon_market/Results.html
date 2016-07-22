@@ -2,12 +2,12 @@
 {% load otree_tags %}
 
 {% block title %}
-Results (Period {{subsession.round_number}} of {{Constants.num_rounds}})
+Resultados (Period {{subsession.round_number}} of {{Constants.num_rounds}})
 {% endblock %}
 
 
 {% block content %}
-You are {{player.role}}. 
+Usted es el {{player.role}}.
 {% if buyer.choice %}
     {% if player.role == 'buyer' %}
         You bought from seller {{buyer.choice}}. The quality grade of your purchase is <strong>{{seller.get_quality_display}}</strong>.
