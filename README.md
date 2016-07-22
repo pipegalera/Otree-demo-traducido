@@ -22,7 +22,7 @@ juegos quedaran más claras.
 * **Subasta Vickrey**: las pregutnas para entender el juego no correspondían con su solución.
 * **Dilema del Voluntario**: las pregutnas para entender el juego no correspondían con su solución.
 * **Dilema del viajero**: {{Constants.reward}} estaba intercambiado erroenamente con {{Constants.pemalty}} en las instrucciones. No afectaba ya que constants.reward y constants.penalty eran el mismo valor. en Resultados modificado.
-* * **Stag Hunt Game**: haciendo el juego a personas cercanas he descubierto que puede generar animadversión el hecho de obligar a realizar elecciones sobre cazar animales. He descrito en el juego un escenario totalmente imaginario manteniendo claras las eleciones posibles para evitar moral triggers en el juego que puedan alterar las decisiones. 
+* **Stag Hunt Game**: haciendo el juego a personas cercanas he descubierto que puede generar animadversión el hecho de obligar a realizar elecciones sobre cazar animales. He descrito en el juego un escenario totalmente imaginario manteniendo claras las eleciones posibles para evitar moral triggers en el juego que puedan alterar las decisiones. 
 
 ## FALLOS NO SOLUCIONADOS
 
