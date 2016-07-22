@@ -21,7 +21,7 @@ juegos quedaran más claras.
 
 * **Subasta Vickrey**: las pregutnas para entender el juego no correspondían con su solución.
 * **Dilema del Voluntario**: las pregutnas para entender el juego no correspondían con su solución.
-* **Dilema del viajero**: {{Constants.reward}} estaba intercambiado erroenamente con {{Constants.pemalty}} en las isntrucciones. No afectaba ya que constants.reward y constants.penalty eran el mismo valor. en Resultados modificado
+* **Dilema del viajero**: {{Constants.reward}} estaba intercambiado erroenamente con {{Constants.pemalty}} en las instrucciones. No afectaba ya que constants.reward y constants.penalty eran el mismo valor. en Resultados modificado
 
 ## FALLOS NO SOLUCIONADOS
 
