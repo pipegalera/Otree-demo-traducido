@@ -36,7 +36,8 @@ juegos quedaran más claras.
 * **Common value auction**: puntos de apuesta y botón next en inglés.
 * **Stackelberg competition**: puntos en resultados y botón next en inglés.
 * **Bertrand competition**: puntos en resultados y botón next en inglés.
-
+* **Stag hunt**: puntos en resultados y botón next en inglés.
+*
 ## Instalar oTree original: Guía rápida
 
 Corra los siguientes comandos:
