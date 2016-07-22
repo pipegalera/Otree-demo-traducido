@@ -27,14 +27,14 @@ juegos quedaran más claras.
 
 * **Generales**: no sé cómo cambiar al castellano como el temporizador, el texto de espera en ResultsWaitPage, botones de "Next", botones de "Yes/No", las variables de cantidades que incluyen points y el mensaje de agradecimiento al final de cada experimento. Imagino que estará en alguna libreria. Por favor, si se corrige el botón "Next" modifique global/Introduccition para quitar la frase "Por favor, pulse "Next" para avanzar".
 * **Survey**: no sé cómo programar la lista de países en castellano.
-* **Dilema del prisionero**: en la fase de resultado salta "cooperate" en vez de "cooperar" en castellano.
+* **Dilema del prisionero**: en la fase de resultado "Usted eligió defect y el otro participante eligió cooperate.".
 * **Juego Agente-Principal**: es muy complicado el juego para que si quiera puedan saber que están haciendo los participantes. Hay que explicarlo mejor.
-* **Matching Pennies**: puntos en resultados en inglés.
-* **Traveler Dilemmma**: puntos en resultados en inglés.
-* **Barganing Game**: puntos en resultados en inglés.
-* **Common_value_auction**: puntos de apuesta en inglés.
-* **Stackelberg_competition**: botón de puntos.
-
+* **Matching Pennies**: puntos en resultados y botón next en inglés.
+* **Traveler Dilemmma**: puntos en resultados y botón next en inglés.
+* **Barganing Game**: puntos en resultados y botón next en inglés.
+* **Common value auction**: puntos de apuesta y botón next en inglés.
+* **Stackelberg competition**: puntos en resultados y botón next en inglés.
+* **Bertrand competition**: puntos en resultados y botón next en inglés.
 
 ## Instalar oTree original: Guía rápida
 
