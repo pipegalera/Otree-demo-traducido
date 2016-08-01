@@ -36,7 +36,7 @@ así que he procurado no modificar el código original salvo fallos puntuales.
 * **Stackelberg competition**: puntos en resultados y botón next en inglés.
 * **Bertrand competition**: puntos en resultados y botón next en inglés.
 * **Stag hunt**: puntos en resultados y botón next en inglés.
-*
+
 ## Instalar oTree original: Guía rápida
 
 Corra los siguientes comandos:
